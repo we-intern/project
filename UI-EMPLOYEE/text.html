@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Medical Claim</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <!--Stylesheet-->
+    
+    <style>
+
+
+  </style>
+  </head>
+  <body>
+    <div class="container col-xl-6 col-md-6 mt-4  " alt="Max-height 100%" >
+        <div class="d-flex text-center align-items-center mb-4 pb-1">
+            <i class=" fa-solid fa-angle-left px-4"></i>
+            <i class="fa-solid fa-capsules px-3" style="font-size: 50px;"></i>
+            <h4 class="  text-center" > Outpatient Clinical</h4>
+        </div>
+        <div class="card col-md-12 col-lg-10" style="max-width: 530px; border-radius:30px ; background-color: #226596 ;">
+            <div class="" style="padding:20px 30px 0px 30px;">
+                <div class="box02  text-center ">
+                <h5 class=" border-2 p-3 text-center" style="background-color:#FFF;border-radius:30px ;" >Submit Medical Claim </h5>
+                </div>
+            </div>
+            <div class="mb-3 px-3" >
+                <div class="col-md-12 col-xl-12 ">
+                    <form id="claimform" >
+                    <!-- progressbar -->
+                    <ul id="progressbar" style="padding-left: 1px;">
+                        <li class="active" id="step1"><strong></strong></li>
+                        <li id="step2"><strong></strong></li>
+                        <li id="step3"><strong></strong></li>
+                        <li id="confirm"><strong></strong></li>
+                    </ul>
+                    <!-- fieldsets -->
+                    <fieldset >
+                        <div class="form-bar" >
+                            <div class="mt-2">
+                                <h5 class="float-start">Claim Detail</h5>
+                                <h6 class="float-end text-danger">Required **</h6>
+                            </div>
+                            <br>
+                            <div class="form-outline mb-2 mt-2">
+                                <label class="member" for="select_mem">Member : </label>
+                                <select class=" form-select form-select ">
+                                <option>Jackson</option>
+                                <option>Dependent</option>
+                                <option>Dependent</option>
+                                <option>Dependent</option>
+                                </select>
+                            </div>
+                            <div class="form-outline mb-2 ">
+                                <label class="date" for="date">Medical Date : </label>
+                                <input type="date" name="date" class="form-control input-sm" placeholder="20/05/2020"/>
+                            </div>
+                            <div class="form-outline mb-2 ">
+                                <label class="amount" for="amount">Claim Amount :  <strong>  RM </strong></label>
+                                <input type="number" name="amount" class="form-control input-sm" placeholder="50.00"/>
+                            </div>
+                            <div class="form-outline mb-2 ">
+                                <label class="note" for="note">Notes : </label>
+                                <input type="text" name="note" class="form-control input-sm" placeholder="Write your note here"/>
+                            </div>
+                        </div>
+                        <input type="button" name="next" class="btn next action-button" value="Next Step"/>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-bar">                                        
+                            <h5 class="fs-title">Submit Documents</h5>
+                            <div class="icon d-flex ">
+                                <i class="float-start fa-solid fa-bell" style="font-size:20px; color: #FEEE60;"></i>
+                                <h5 class="px-3 fs-6">Invoice <span class="text-danger"> ** </span> </h5>
+                            </div>                                        
+                            <h6 class="fs-6 mt-2">Upload Document</h6>        
+                            <div class=" fileupload">
+                                <div class="col-sm-12 col-xl-12">
+                                    <div class="form-group files ">
+                                        <label>Upload Your File </label>
+                                        <input type="file" class="form-control-sm input-sm "  multiple="">
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                        <input type="button" name="next" class="next action-button" value="Next Step"/>
+                    </fieldset>
+                    <fieldset>                                           
+                        <div class="form-bar ">
+                            <h5 class="fs-title">Confirm Your information</h5>
+                            <h6 class="fs-title">Claim Detail</h6>
+                            <div class="form-outline mb-4 ">
+                                <label class="member" for="select_mem">Member : </label>
+                                <input type="text" name="member" class="form-control input-sm" placeholder="Jackson" disabled/>
+                            </div>
+                            <div class="form-outline mb-4 ">
+                                <label class="policy_num" for="policy_num">Policy Number : </label>
+                                <input type="text" name="policy_num" class="form-control input-sm" placeholder="BP 00900" disabled/>
+                            </div>
+                            <div class="form-outline mb-4 ">
+                                <label class="date" for="date">Medical Date : </label>
+                                <input type="date" name="date" class="form-control input-sm" placeholder="20/05/2020" disabled/>
+                            </div>
+                            <div class="form-outline mb-4 ">
+                                <label class="amount" for="amount">Claim Amount :  <strong>  RM </strong></label>
+                                <input type="number" name="amount" class="form-control input-sm" placeholder="50.00" disabled/>
+                            </div>
+                            <div class="form-outline mb-4 ">
+                                <label class="note" for="note">Notes : </label>
+                                <input type="text" name="note" class="form-control" placeholder="Write your note here" disabled/>
+                            </div>
+                            <h6 class="fs-6 mt-2">Upload Document</h6>
+                            <div class="col-md-12">
+                            files 
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                        <input type="button" name="next" class="next action-button" value="Next Step"/>  
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-bar text-center">
+                            <h2 class="fs-title ">Success !</h2>
+                            <br><br>
+                            <div class="row text-center justify-content-center">
+                                <div class="col">
+                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row justify-content-center">
+                                <div class="">
+                                <h5>You Have Successfully Submit Your Medical Claim</h5>
+                                <p>Below is your claim number</p>
+                                <p> Reference Number : </p>
+                                <p> Claim Number : </p>
+                                <p> Name :</p>
+                                <p> Policy Number :</p>
+                                <p> Submit Time : </p>
+                                <p> File.pdf</p>
+                                <input type="button" name="" class="btn action-button" value="Confirm"/>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    </form> 
+                </div>
+            </div>        
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="claim_step.js"></script>
+
+
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/bootstrap.js"></script>
+     <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+ <script>
+    var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+ </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script>
+     const phoneInputField = document.querySelector("#phone");
+     const phoneInput = window.intlTelInput(phoneInputField, {
+       preferredCountries: [ "my"],
+       utilsScript:
+         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+     });
+     /**
+     const info = document.querySelector(".alert-info");
+ 
+ function process(event) {
+  event.preventDefault();
+ 
+  const phoneNumber = phoneInput.getNumber();
+ 
+  info.style.display = "";
+  info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+ }
+ **/
+   </script>
+   <script src="claim_step.js"></script>
+
+  </body>
+</html>

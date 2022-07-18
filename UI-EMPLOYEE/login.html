@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-employee.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <style>
+    /*sub tab */
+    .profile-head .nav-tabs{
+    margin-bottom:5%;
+    border: none;
+    }
+
+    .profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+    color: #827688;
+    }
+
+    .profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #714288;
+    color: #714288;
+    }
+    .profile-tab label{
+    font-weight: 600;
+    }
+
+    .profile-tab p{
+    font-weight: 600;
+    color: #714288;
+    }
+
+    /**/
+    .login-color{
+    background-color: #F5F5F5;
+    max-width: 400px;
+    border-radius: 20px;
+
+    position: relative;
+
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    }
+    .form-control {
+    background: transparent;
+    border: none;
+    height: 50px;
+    color: black !important;
+    border: 1px solid transparent;
+    background: rgba(171, 195, 255, 100);
+    border-color: rgba(34, 101, 150, 100); 
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    @media (prefers-reduced-motion: reduce) {
+    .form-control {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; } }
+    .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 100) !important; }
+    .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 100) !important; }
+    .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(0, 0, 0, 100) !important; }
+    .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 100) !important; }
+    .form-control:hover, .form-control:focus {
+    background: transparent;
+    background: rgba(171, 195, 255, 0.50);
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(34, 101, 150, 0.50); }
+    .form-control:focus {
+    border-color: rgba(34, 101, 150, 0.50); }
+
+    /*form styles*/
+    #registerform {
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    }
+
+    #registerform fieldset .form-bar {
+
+    border: 0 none;
+    border-radius: 5px;  
+    padding: 20px 20px 0px 20px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+    }
+
+    #registerform fieldset {
+
+    background: #F5F5F5;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+    }
+
+    /*Hide all except first fieldset*/
+    #registerform fieldset:not(:first-of-type) {
+    display: none;
+    }
+
+    #registerform fieldset .form-bar {
+    text-align: left;
+    color: #6e6d6d;
+    }
+
+    #registerform input, #registerform textarea {
+
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 15px;
+    letter-spacing: 1px;
+    }
+
+    #registerform input:focus, #registerform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+
+    border: 2px solid skyblue;
+    outline-width: 0;
+    }
+
+    /*Blue Buttons*/
+    #registerform .action-button {
+    width: 100px;
+    background: #226596;
+
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    }
+
+    #registerform .action-button:hover, #registerform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #226596;
+    }
+
+    /*Previous Buttons*/
+    #registerform .action-button-previous {
+    width: 100px;
+    background: #616161;
+
+    color: white;
+    border: 0 none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    }
+
+    #registerform .action-button-previous:hover, #registerform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+    }
+
+    /*progressbar*/
+    #progressbar {
+
+    overflow: hidden;
+    color: lightgrey;
+    }
+
+    #progressbar .active {
+    color: #000000;
+    }
+
+    #progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative;
+    }
+
+    /*ProgressBar before any progress*/
+    #progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+    }
+
+    /*ProgressBar connectors*/
+    #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+    }
+
+    /*Color number of the step and the connector before it*/
+    #progressbar li.active:before, #progressbar li.active:after {
+    background: #11CCA8;
+    }
+    @media(max-width:991px){
+    .content-desktop{
+    display:none;
+    }
+    }
+  </style>
+</head>
+  <body>
+    <div class="container col-xl-12 col-md-6 mt-4  "   >
+      <div class="d-flex text-center align-items-center mb-4 pb-1">
+        <h4 class="  text-center  px-3" >Sign in / Sign up</h4>
+      </div>
+      <div class="row">
+        <div class="col-xl-6">
+          <!--desktop view none-->
+        </div>
+        <div class="col-xl-6">
+          <!-- nav options -->
+          <div class="profile-head mt-1 ">
+            <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+              <li class="nav-item px-3" >
+              <a class="nav-link active" id="login-tab"  data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true" >Login</a>
+              </li>
+              <li class="nav-item px-3">
+              <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End nav options -->
+        </div>
+      </div>
+      <div class="row">
+      <!--desktop view img-->
+        <div class="col-xl-6 me-auto">
+          <div class="feedback-container content-desktop" id="alert-dialog">
+            <i class="fa-solid fa-image" style="font-size: 400px;"></i>
+          </div>
+        </div>
+        <div class="col-xl-6 ms-auto ">
+          <div class=" tab-content profile-tab" id="myTabContent">
+            <!--First Tab-->
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+              <div class="login-color px-4 offset-lg-1 py-2">
+                <!--Login Option Nav-->
+                <ul class="mt-4 nav nav-pills justify-content-center" id="mySeocondTab" role="tablist">
+                  <li class="nav-item" role="mobile">
+                  <button class="nav-link active" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button" role="tab" aria-controls="mobile" aria-selected="true" style="width:200px">Mobile Number</button>
+                  </li>
+                  <li class="nav-item" role="mobile">
+                  <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" type="button" role="tab" aria-controls="email" aria-selected="false" style="width:150px">Email</button>
+                  </li>
+                </ul>
+                <!--First Mobile / Email-->
+                <div class="tab-content" id="mySecondTabContent">
+                  <!---Mobile Login-->
+                  <div class="tab-pane fade show active" id="mobile" role="tabpanel" aria-labelledby="mobile-tab">
+                    <form action="#" class="signin-form">
+                      <div class="form-group offset-lg-1">
+                        <label class="px-4 mt-4">Country</label>
+                        <label >Phone Number</label>
+                        <div class="d-flex ">
+                          <i class="fa-solid fa-phone m-2 mt-3"></i>
+                          <input id="phone" type="tel" name="phone" class="form-control col-md-12 "/>
+                          <!--
+                          <input type="submit" class="btn" value="Verify" />-->
+                        </div>
+                      </div>
+                      <div class="form-group col-md-12 col-xl-9 offset-lg-1">
+                        <label class="px-5 mt-3">Password</label>
+                        <div class=" d-flex">
+                          <i class="fa-solid fa-key m-2 mt-3"></i>
+                          <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                      </div>
+                      <div class="form-group d-md-flex my-3 offset-lg-1">
+                        <div class="w-50">
+                          <label class="checkbox-wrap checkbox-primary">Remember Me
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="w-50 text-md-right">
+                            <a href="forgot-pass.html" >Forgot Password</a>
+                        </div>
+                      </div>
+                      <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary submit px-3 my-2" onclick="location.href='dashboard.html'">Login</button>
+                      </div>
+                    </form>
+                    <div class="alert alert-info" style="display: none;"></div>
+                  </div>
+                  <!---email Login-->
+                  <div class="tab-pane fade" id="email" role="tabpanel" aria-labelledby="email-tab">
+                    <form action="#" class="signin-form">
+                      <div class="form-group col-md-12 col-xl-9 offset-lg-1">
+                        <label class="px-5 mt-3">Email</label>
+                        <div class=" d-flex">
+                          <i class="fa-solid fa-envelope m-2 mt-3"></i>
+                          <input id="email-field" type="email" class="form-control" placeholder="Email" required>
+                        </div>                             
+                      </div>
+                      <div class="form-group col-md-12 col-xl-9 offset-lg-1">
+                        <label class="px-5 mt-3">Password</label>
+                        <div class=" d-flex">
+                          <i class="fa-solid fa-key m-2 mt-3"></i>
+                          <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                      </div>
+                      <div class="form-group d-md-flex my-3 offset-lg-2">
+                        <div class="w-50">
+                          <label class="checkbox-wrap checkbox-primary">Remember Me
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <div class="w-50 text-md-right">
+                            <a href="forgot-pass.html" >Forgot Password</a>
+                        </div>
+                      </div>
+                      <div class="form-group text-center">
+                        <button type="submit" onclick="location.href='dashboard.html'" class="btn btn-primary submit px-3 my-2">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!---End email Login-->
+                </div>
+                <!--End First Mobile / Email-->
+              </div>
+            </div>                         
+            <!--Second Tab-->
+            <div class="tab-pane fade " id="register" role="tabpanel" aria-labelledby="register-tab">
+              <form id="registerform" >
+                <!-- progressbar -->
+                <ul id="progressbar" style="padding-left: 1px;">
+                  <li class="active" id="step1"><strong></strong></li>
+                  <li id="step2"><strong></strong></li>
+                  <li id="confirm"><strong></strong></li>
+                </ul>
+                <div class="alert alert-warning text-start" role="alert" >
+                  <p class="text-warning"><i class="fa-solid fa-note-sticky "></i> Note</p>
+                  You has been invite as a part of employee in SdnBhd
+                </div>
+                <!-- fieldsets -->
+                <fieldset class="mb-5">
+                  <div class="form-bar " >
+                    <div class="mt-2">
+                      <h6 class="float-start">Registration only available for members of company that have signed up.</h6>                                   
+                    </div>
+                    <div class="form-outline mb-2 pt-5">
+                      <label class="date" for="date">Company Domain </label>
+                      <input type="domain" name="domain" class="form-control input-sm" placeholder="xxx.co"/>
+                    </div>
+                  </div>
+                  <input type="button" name="next" class="btn next action-button" value="Next Step"/>
+                  <div>
+                  <a href="register-via-email.html" class="text-decoration-none">Don’t know your domain URL? Find your domain</a>
+                  </div>
+                </fieldset>
+                <fieldset>                                           
+                  <div class="form-bar ">
+                    <h5 class="fs-title">Confirm Your information</h5>
+                    <div class="form-outline mb-4 mt-4">
+                      <label class="member" for="select_mem">Employee Name </label>
+                      <input type="text" name="member" class="form-control " placeholder="TXXXXX" disabled/>
+                    </div>
+                    <div class="form-outline mb-4 ">
+                      <label class="policy_num" for="policy_num">Employee Company</label>
+                      <input type="text" name="policy_num" class="form-control input-sm" placeholder="P*** Sdn Bhd" disabled/>
+                    </div>
+                    <div class="form-outline mb-4 ">
+                      <label class="phone" for="phone">Phone Number </label>
+                      <input type="tel" name="phone" class="form-control input-sm" placeholder="012-3456 789" />
+                    </div>
+                    <div class="form-outline mb-4 ">
+                      <label class="address1" for="address1">Address line 1 </label>
+                      <input type="text" name="address1" class="form-control input-sm" placeholder="unit/floor"/>
+                    </div>
+                    <div class="form-outline mb-4 ">
+                      <label class="address2" for="address2">Address line 2 </label>
+                      <input type="text" name="address2" class="form-control input-sm" placeholder="road"/>
+                    </div>
+                  </div>
+                  <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                  <input type="button" name="next" class="next action-button" value="Next Step"/>  
+                </fieldset>
+                <fieldset>                                           
+                  <div class="form-bar ">
+                    <div class="form-outline mb-4 mt-4">
+                    <label class="kad" for="kad">MyKAD </label>
+                    <input type="number" name="kad" class="form-control " placeholder="000000-00-0000" />
+                    </div>
+                    <div class="form-outline mb-4 ">
+                    <label class="password01" for="password01">Create Password</label>
+                    <input type="password" name="password01" class="form-control input-sm"/>
+                    </div>
+                    <div class="form-outline mb-4 ">
+                    <label class="password02" for="password02">Confirm Password</label>
+                    <input type="password" name="password02" class="form-control input-sm"/>
+                    </div>
+                  </div>
+                  <!-- Button trigger modal -->
+                  <input type="button" name="" class="btn action-button" data-bs-toggle="modal" data-bs-target="#register-confirm" value="Confirm"/>
+                </fieldset>
+              </form> 
+            </div>
+            <!--End Second Tab-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Confirm Register-->
+    <div class="modal fade" id="register-confirm" tabindex="-1" aria-labelledby="register-confirmLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="register-confirmLabel">Confirm Submit your information ?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure want to submit this form
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Modal-->
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script>
+      var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+      triggerTabList.forEach(function (triggerEl) {
+      var tabTrigger = new bootstrap.Tab(triggerEl)
+
+      triggerEl.addEventListener('click', function (event) {
+      event.preventDefault()
+      tabTrigger.show()
+      })
+      })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+    preferredCountries: [ "my"],
+    utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    /**
+    const info = document.querySelector(".alert-info");
+
+    function process(event) {
+    event.preventDefault();
+
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "";
+    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+    }
+    **/
+    </script>
+    <script src="../js/demo/tab-mobile-email.js"></script>
+  </body>
+</html>

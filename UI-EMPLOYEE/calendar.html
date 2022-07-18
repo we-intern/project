@@ -1,0 +1,309 @@
+<!DOCTYPE html>  
+ <html lang="en">  
+  <head>  
+   <meta charset="UTF-8" />  
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+   <title>Document</title>  
+
+
+   <!-- Bootstrap -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+ 
+   <link href="../css/lib/style-employee.css" rel="stylesheet">
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+   <![endif]-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+
+     
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.nl.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+    
+    <style>
+    #calendar{
+    position:relative;
+    float: left;              
+    }
+    #bottom {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    }
+
+    input {
+    padding: 10px 20px !important;
+    border: 1px solid #000 !important;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #616161 !important;
+    color: #fff !important;
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 180px;
+    }
+
+    input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #512DA8;
+    outline-width: 0;
+    }
+
+
+    button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+    }
+
+    .datepicker-dropdown:after {
+    border-bottom: 6px solid #000;
+    }
+
+    .active {
+    border-radius: 6px !important;
+    background-image: linear-gradient(#90CAF9, #64B5F6) !important;
+    color: #000 !important;
+    }
+
+    .disabled {
+    color: #616161 !important;
+    }
+
+    .prev:hover, .next:hover, .datepicker-switch:hover {
+    background-color: inherit !important;
+    opacity: 1;
+    }
+
+    .cell {
+    border: 1px solid #BDBDBD;
+    background-color: #226596;
+    
+    border-radius: 30px;
+    cursor: pointer;
+    }
+
+    .cell:hover {
+    border: 1px solid #226596;
+    }
+
+    .cell.select {
+    background-color: #4f7794;
+    color: #fff;
+    }
+    #offcanvasBottom{
+    height: 380px; 
+    background-color: #A8C4D9; 
+    border:none; 
+    border-radius: 10px;
+    margin-left: 32%;
+    }
+    .button-1{
+   
+    border:none; 
+    background-color:#226596;
+    }
+    .button-2{
+    
+    border:none; 
+    background-color:#11CCA8;
+    }
+
+    .offcanvas-body h4{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 31px;
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    color: #226596;
+    }
+    .offcanvas-body .button-3{
+    background: #226596;
+    border-radius: 30px;
+    }
+    @media only screen and (max-width: 600px) {
+    #offcanvasBottom{
+    height: 350px;
+    margin-left: 0%;
+    }
+    }
+  
+   </style>
+  </head>  
+  <body>  
+    <div class="container col-xl-5 col-md-6 mt-4"  >
+      <div class="d-flex text-center align-items-center mb-2 pb-1">
+        <a href="dashboard.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+        <i class="fa-solid fa-truck-medical float-start fa-3x px-3"></i>
+        <h5 class="  text-center" > Panel Clinic . Appointment</h5>
+      </div>
+      <div class="float-start col-lg-10 col-md-12 ">
+        <div class="row justify-content-center mx-0">
+          <div class="col-lg-10">
+            <div class=" border-0">  
+              <form autocomplete="off" id="submit-button">
+                <div class=" bg " >                  
+                  <div class="mx-0 mb-0 row text-center justify-content-center justify-content-start px-1">
+                    <div class="col-md-12 col-12 px-5"  id="calendar" >
+                   
+                      <!--
+                      <div class=" col-md-8 col-12 col-sm-12" id="bottom">
+                       <input type="text" class="form-control" id="alternate"  readonly>
+                      
+                      </div>
+                      -->
+                    </div>                   
+                  </div>
+                  <hr>
+                </div>
+                    
+                <div class="card-body col-md-12 col-sm-10" id="me" style="display:none; " >
+                  <i class="fa-solid fa-user-doctor float-start mt-2" style="font-size: 30px;"></i>                  
+                  <div class="row  mx-0 mt-2 mb-2 ">                  
+                    <h6>KLINIK ALAM MEDIC        &nbsp;  &nbsp;        1.2 km </h6>
+                    <p>NO 15, Kampung  Pinang Dalam, Klang, Selangor</p>
+                  </div>
+                  <div class="row text-center mx-0 mt-2 mb-2">
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">10:00AM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">10:30AM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">11:00AM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">11:30AM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">12:00AM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">12:30AM</button>                    
+                  </div>
+                
+                  <div class="row text-center mx-0">
+                    <button class="col-md-12 col-12 ms-auto btn btn-light cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom" disabled>1:00PM - 2:00PM<br> Lunch Time</button>
+                  </div>
+                  <div class="row text-center mx-0 mt-2 mb-2" >
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">15:00PM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">15:30PM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">16:00PM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">16:30PM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">17:00PM</button>
+                    <button class="col-md-4 col-4 ms-auto btn btn-primary cell py-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">17:30PM</button>                  
+                  </div>
+                </div>       
+              </form>      
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <div  class="  col-sm-12 col-xl-4 offcanvas offcanvas-bottom px-3" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
+      <div class="offcanvas-header text-center">
+        <div class="col-sm-12 col-md-10"></div>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+        <div class="offcanvas-body" >
+          <div class="col-sm-12 col-md-12 text-center"> 
+            <i class="fa-solid fa-user-doctor float-start px-1 pt-2" style="font-size: 40px;"></i>   
+            <p class="offcanvas-title px-1" id="offcanvasBottomLabel" >KLINIK ALAM MEDIC<br</p>
+            <p>No 15, Kampung  Pinang Dalam, Klang, Selangor</p>
+            <h4 class="text-center">18 Wed 2022</h4>
+          </div> 
+          <form>
+            <div class="member-select col-12">
+              <div>
+                <label>Member</label>
+                <select class="form-select" aria-label="Default select example" id="validationCustom04" required style="background-color:#226596; color: #fff;">
+                  <option selected value="">Select Member</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="pt-2">
+                <label>Booking Time</label>
+                <button class="button-3 btn btn-secondary px-3 col-4"  disabled >11:15am</button>
+              </div>
+            </div>
+            <div class=" mt-3  ">
+              <button type="button" class="button-1 btn btn-secondary mb-1 col-5" data-bs-dismiss="offcanvas"  >Close</button>
+              <button type="submit"  class="button-2 btn btn-success col-6">Confirm Booking</button>        
+            </div> 
+          </form>
+        </div>   
+    </div>
+  </div>
+
+    
+  <script>
+  $(document).ready(function(){
+  var selectedDates = [];
+  datePicker = $('#calendar').datepicker({
+  startDate: new Date(),
+  minDate: 0,
+  todayHighlight: true, 
+  multidate: true,
+  format: 'dd-mm-yyyy' ,
+  language: "en",
+  daysOfWeekDisabled: [0, 6],
+  altField: '#alternate',
+  altFormat: 'dd-mm-yyyy'
+  });
+
+  datePicker.on('changeDate', function (e) {
+  var x = document.getElementById('me');    
+  if (x.style.display == 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }  
+  
+  if (e.dates.length < 2) {
+    selectedDates = e.dates;
+  } else {
+    datePicker.data('datepicker').setDates(selectedDates);
+    alert('You can only select 1 date.');   
+  } 
+  e.preventDefault();           
+  });
+
+  /*
+  $('#submit-button').on('submit', function(e){
+
+  e.preventDefault();
+  $('#bottom').modal('show');
+  $('#myModal').modal('show');
+  e.preventDefault();
+  });*/
+
+
+  $('.cell').click(function(){
+  $('.cell').removeClass('select');
+  $(this).addClass('select');
+  });
+
+  $("form").submit(function(){
+  if (confirm("Are you sure want to book ?")) {
+  alert("You have successfully booked a time !");
+  } 
+  });
+  });
+
+  </script> 
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+  </body>  
+ </html>  

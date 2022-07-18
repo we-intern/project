@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Department - Detail</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-employee.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+  .profile-pic-wrapper {
+  
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pic-holder {
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pic-holder .pic {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.pic-holder .upload-file-block,
+.pic-holder .upload-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(90, 92, 105, 0.7);
+  color: #f8f9fc;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.pic-holder .upload-file-block {
+  cursor: pointer;
+}
+
+.pic-holder:hover .upload-file-block,
+.uploadProfileInput:focus ~ .upload-file-block {
+  opacity: 1;
+}
+
+.pic-holder.uploadInProgress .upload-file-block {
+  display: none;
+}
+
+.pic-holder.uploadInProgress .upload-loader {
+  opacity: 1;
+}
+
+/* Snackbar css */
+.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 14px;
+  transform: translateX(-50%);
+}
+
+.snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+    </style>
+</head>
+  <body>
+    <div class="container col-xl-4 col-md-6 mt-4  "   >
+        <div class="d-flex text-center align-items-center mb-4 pb-1">
+          <a href="dashboard.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+          <h4 class="text-center px-3" >Profile</h4>
+        </div>
+
+        <div >           
+            <div class=" mx-4 py-2 col-xl-10 ">
+                <div class="text-center d-flex justify-content-between">
+                   
+                    <div class="">
+                        <div class="profile-pic-wrapper">
+                            <div class="pic-holder">
+                              <!-- uploaded pic shown here -->
+                              <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?person">
+                          
+                              <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+                              <label for="newProfilePhoto" class="upload-file-block">
+                                <div class="text-center">
+                                  <div class="mb-2">
+                                    <i class="fa fa-camera fa-2x"></i>
+                                  </div>
+                                  <div class="text-uppercase">
+                                    Update <br /> Profile Photo
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+
+                          </div>   
+                    </div>
+                    <div class="mt-5">
+                        <h4> <b>Jackson</b></h4>
+                        <div>Employee</div>
+                        <div>xxxxxx-xx-1098</div>
+                    </div>
+                    <div class=" ">
+                        <a href="#" class=""> <i class="fa-solid fa-pen-to-square"></i></a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 mx-3">
+                <span class="rounded-pill bg-secondary p-2 " >Profile</span>
+                <form class="mt-4">
+                    <div class="row mb-3">
+                        <label for="inputID" class=" col-sm-5 col-4 col-form-label">Company ID :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="code" class="form-control" id="inputID" placeholder="C001012">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputName" class=" col-sm-5 col-4 col-form-label">Company Name :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="text" class="form-control" id="inputName" placeholder="SDN BHD">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputDepartment" class=" col-sm-5 col-4 col-form-label">Department :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="text" class="form-control" id="inputDepartment" placeholder="SDN BHD">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputAddress" class=" col-sm-5 col-4 col-form-label">Address line 1 :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Jln Bibong">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputAddress2" class=" col-sm-5 col-4 col-form-label">Address line 2 :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="SDN BHD">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputPhone" class=" col-sm-5 col-4 col-form-label">Phone :</label>
+                        <div class="col-sm-7 col-8">
+                            <input type="number" class="form-control" id="inputPhone" placeholder="01x-xxxx 000">
+                        </div>
+                    </div>
+                    <!--
+                    <div class="row py-4">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </div>
+                    -->
+                   
+                </form>       
+            </div>
+           
+            
+
+        
+        
+        </div>
+    </div>
+
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     <script>
+        $(document).on("change", ".uploadProfileInput", function () {
+      var triggerInput = this;
+      var currentImg = $(this).closest(".pic-holder").find(".pic").attr("src");
+      var holder = $(this).closest(".pic-holder");
+      var wrapper = $(this).closest(".profile-pic-wrapper");
+      $(wrapper).find('[role="alert"]').remove();
+      triggerInput.blur();
+      var files = !!this.files ? this.files : [];
+      if (!files.length || !window.FileReader) {
+        return;
+      }
+      if (/^image/.test(files[0].type)) {
+        // only image file
+        var reader = new FileReader(); // instance of the FileReader
+        reader.readAsDataURL(files[0]); // read the local file
+
+        reader.onloadend = function () {
+          $(holder).addClass("uploadInProgress");
+          $(holder).find(".pic").attr("src", this.result);
+          $(holder).append(
+            '<div class="upload-loader"><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
+          );
+
+          // Dummy timeout; call API or AJAX below
+          setTimeout(() => {
+            $(holder).removeClass("uploadInProgress");
+            $(holder).find(".upload-loader").remove();
+            // If upload successful
+            if (Math.random() < 0.9) {
+              $(wrapper).append(
+                '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>'
+              );
+
+              // Clear input after upload
+              $(triggerInput).val("");
+
+              setTimeout(() => {
+                $(wrapper).find('[role="alert"]').remove();
+              }, 3000);
+            } else {
+              $(holder).find(".pic").attr("src", currentImg);
+              $(wrapper).append(
+                '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There is an error while uploading! Please try again later.</div>'
+              );
+
+              // Clear input after upload
+              $(triggerInput).val("");
+              setTimeout(() => {
+                $(wrapper).find('[role="alert"]').remove();
+              }, 3000);
+            }
+          }, 1500);
+        };
+      } else {
+        $(wrapper).append(
+          '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose the valid image.</div>'
+        );
+        setTimeout(() => {
+          $(wrapper).find('role="alert"').remove();
+        }, 3000);
+      }
+    });
+
+     </script>
+  </body>
+
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Check-in Info</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-employee.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+            #offcanvasBottom{
+    height: 300px; 
+    background-color: #A8C4D9; 
+    border:none; 
+    border-radius: 10px;
+    margin-left: 32%;
+    }
+    .button-1{
+   
+    border:none; 
+    background-color:#226596;
+    }
+    .button-2{
+    
+    border:none; 
+    background-color:#11CCA8;
+    }
+
+    .offcanvas-body h4{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 31px;
+   
+    letter-spacing: -0.408px;
+
+    color: #226596;
+    }
+    .offcanvas-body .button-3{
+    background: #226596;
+    border-radius: 30px;
+    }
+    @media only screen and (max-width: 600px) {
+    #offcanvasBottom{
+    height: 300px;
+    margin-left: 0%;
+    }
+    }
+    </style>
+</head>
+  <body>
+
+    <section >
+        <div class="container col-xl-4 col-md-6 pt-4"   >
+            <div class="d-flex text-center align-items-center mb-4 pb-1">
+                <a href="checkin.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+                <i class="fa-solid fa-qrcode px-3 fa-3x ms-3"></i>
+                <h4 class="text-center"> Payment</h4>
+            </div>
+        </div>
+      </section>
+      <section class="page-section text-white mb-0" id="">
+        <div class="container col-xl-4 col-md-6 card bg-secondary pb-5" id="container">
+            <h4 class="text-center my-5">BILL DETAILS</h4>     
+            <div class="mx-3 py-4 col-xl-11 card">
+            <div class="text-center">
+                <h5 class="mb-2">WELCOME , JACKSON </h5>
+                <p>xxxxxx-xx-1009</p>
+                <h6 class="mt-4">KLINIK ALAM MEDIC   </h6>
+                <h6 class="px-5">NO 15, 
+                    Kampung Pinang Dalam,
+                    Klang, Selangor</h6>
+                <div class="mt-3">
+                    <p>Check-in Date : 18 / 5 / 2022</p>
+                    <p>Check-in Time : 10:00 am</p>
+                </div>
+                <div class="mt-4 text-center">
+                    <h5 class="">Payment</h5>
+                    <p class="mt-2">Amount: RM250</p>
+                    <p class="mt-2">Covered: RM250 </p>
+                    <div class="row mt-4">
+                        <div class="col-3">
+                            <p>01.</p>
+                        </div>
+                        <div class="col-5">
+                            <p>Med Paracetamol</p>
+                        </div>
+                        <div class="col-4">
+                            <p>RM 50</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <p>02.</p>
+                        </div>
+                        <div class="col-5">
+                            <p>Consultation</p>
+                        </div>
+                        <div class="col-4">
+                            <p>RM 150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <a class="mt-5 btn btn-danger button-01 rounded-pill" href="check-in-payment-success.html">Check - out  <br>
+                        RM 250 .00</a>
+                </div>
+                <div class="col-md-12 text-center mt-2">
+                    <a href="check-in-payment-self.html" class="text-decoration-none"> <p class="fst-italic">Pay Myself </p></a>
+                </div>
+                
+            </div>
+            </div> 
+        </div>
+      </section>
+
+
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     
+  </body>
+
+</html>

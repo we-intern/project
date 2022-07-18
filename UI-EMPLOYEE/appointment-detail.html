@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Appointment</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-employee.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+      #offcanvasBottom{
+      height: 300px; 
+      width: 380px; 
+      background-color: #A8C4D9; 
+      border:none; 
+      border-radius: 10px;
+      margin-left: 32%;
+      }    
+  
+      @media only screen and (max-width: 600px) {
+      #offcanvasBottom{
+      height: 300px;
+      margin-left: 0%;
+      }
+      }
+    </style>
+</head>
+  <body>
+    <div class="container col-xl-4 col-md-6 mt-4  "   >
+      <div class="d-flex text-center align-items-center mb-4 pb-1">
+        <a href="appointment.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+        <i class="fa-solid fa-address-book fa-3x px-3"></i>
+        <h4 class="  text-center" >Appointment</h4>
+      </div>
+      <div class="col-xl-10">
+        <div class="row px-4 mt-3">
+          <h4 class="mb-3"> <b>My Appointment  </b></h4>
+          <div class="col-10"> 
+              <h6 class="pt-2">KLINIK ALAM MEDIC    </h6>
+          </div>
+          <div class="col-md-10 "> 
+              <p>
+                  NO 15, 
+                  Kampung 
+                  Pinang Dalam,
+                  Klang, Selangor</p>
+          </div>
+          <div class="col-md-10 text-white px-5 mt-2"> 
+              <div class="bg-success rounded-pill pt-2 pb-1">
+                  <p class="text-center text-white">Date : 18 May 2022</p>
+              </div>
+              <div class="mt-1 bg-success rounded-pill pt-2 pb-1">
+                  <p class="text-center text-white">Time : 10:15am</p>
+              </div>
+              <a class="" href="#">
+              <div class="d-flex mt-1 bg-primary rounded-pill pt-2 pb-1 text-white">
+                  <i class="fa-solid fa-bell px-4"></i>
+                  <p class="text-center text-white ">Remind me</p>
+              </div></a>
+          </div>
+          <div class="col-md-10 text-center mt-4">
+              <a class="text-dark text-decoration-none fst-italic "
+              type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom"
+                href="#">Cancel Booking</a>
+          </div>
+          <div  class=" container col-sm-10 col-xl-4 offcanvas offcanvas-bottom px-3" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
+              <div class="offcanvas-header text-center">
+                <div class="col-sm-12 col-md-10"></div>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body" >
+              <div class="col-sm-12 col-md-12"> 
+                  <span class="badge bg-danger" style="font-size: 20px;">Alert</span>
+                  <p class="mt-5">Are You sure Cancel Your Booking ??</p>
+              </div> 
+              <div class="offcanvas-footer mt-5 ">
+              <button type="button" class="button-1 btn btn-secondary mb-1 col-5" data-bs-dismiss="offcanvas"  >Close</button>
+              <button type="submit"  class="button-2 btn btn-success col-6">Confirm   </button>        
+              </div> 
+              
+              </div>   
+            </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+     
+  </body>
+
+</html>

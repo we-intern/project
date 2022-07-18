@@ -1,0 +1,76 @@
+  html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 550;
+    padding: 0 ;
+    height: 100%;
+   
+    margin: 0;
+  }
+  
+  p{
+    margin: 0;
+    letter-spacing: -0.408px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    color: #21323F;
+  }
+  h1,h2,h3,h4,h5,h6 {
+   
+    margin: 0;
+    letter-spacing: -0.408px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    color: #21323F;
+  }
+ 
+  
+  #container {
+    
+    background-color: #ABC3FF !important;
+
+  }
+  
+  #qr-canvas {
+    margin: auto;
+    width: calc(100% - 20px);
+    max-width: 400px;
+  }
+  
+  #btn-scan-qr {
+    cursor: pointer;
+  }
+  
+  #btn-scan-qr img {
+    height: 10em;
+    padding: 15px;
+    margin: 15px;
+    background: white;
+    border-radius: 30px;
+  }
+  
+  #qr-result {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: white;
+  }
+  
+.scan{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: -0.408px;
+
+    color: #21323F;
+}

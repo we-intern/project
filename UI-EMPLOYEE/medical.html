@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Medical Claim</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/lib/style-employee.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <!--Stylesheet-->
+    
+    <style>
+
+    body {
+    background-color: #f5f5f5;
+    }
+    /*form styles*/
+    #claimform {
+        text-align: center;
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        height:auto;
+        margin: 0 auto;
+    }
+
+    #claimform fieldset .form-bar {
+        
+        border: 0 none;
+        border-radius: 5px;  
+        padding: 20px 20px 0px 20px;
+        box-sizing: border-box;
+        width: 94%;
+        margin: 0 3% 20px 3%;
+        
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+
+    #claimform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 20px;
+
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+
+    /*Hide all except first fieldset*/
+    #claimform fieldset:not(:first-of-type) {
+        display: none;
+    }
+
+    #claimform fieldset .form-bar {
+        text-align: left;
+        color: #6e6d6d;
+    }
+
+    #claimform input, #claimform textarea {
+    
+        
+        margin-top: 2px;
+        width: 100%;
+        box-sizing: border-box;
+        color: #2C3E50;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    #claimform input:focus, #claimform textarea:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: none;
+        
+        border: 2px solid skyblue;
+        outline-width: 0;
+    }
+
+    /*Blue Buttons*/
+    #claimform .action-button {
+        width: 100px;
+        background: #226596;
+    
+        color: white;
+        border: 0 none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    #claimform .action-button:hover, #claimform .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #226596;
+    }
+
+    /*Previous Buttons*/
+    #claimform .action-button-previous {
+        width: 100px;
+        background: #616161;
+        
+        color: white;
+        border: 0 none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    #claimform .action-button-previous:hover, #claimform .action-button-previous:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+    }
+
+
+
+    /*The background card*/
+
+    .card {
+        z-index: 0;
+        
+        border-radius: 0.5rem;
+        position: relative;
+    }
+
+
+
+    /*progressbar*/
+    #progressbar {
+        
+        overflow: hidden;
+        color: lightgrey;
+    }
+
+    #progressbar .active {
+        color: #000000;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 12px;
+        width: 25%;
+        float: left;
+        position: relative;
+    }
+
+    /*Icons in the ProgressBar*/
+    #progressbar #step1:before {
+        font-family: FontAwesome;
+        content: "\31";
+    
+    }
+
+    #progressbar #step2:before {
+        font-family: FontAwesome;
+        content: "\32";
+    }
+
+    #progressbar #step3:before {
+        font-family: FontAwesome;
+        content: "\33";
+    }
+
+    #progressbar #confirm:before {
+        font-family: FontAwesome;
+        content: "\f00c";
+    }
+
+    /*ProgressBar before any progress*/
+    #progressbar li:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 18px;
+        color: #ffffff;
+        background: lightgray;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px;
+    }
+
+    /*ProgressBar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: lightgray;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: -1;
+    }
+
+    /*Color number of the step and the connector before it*/
+    #progressbar li.active:before, #progressbar li.active:after {
+        background: #11CCA8;
+    }
+
+    /*Upload File*/
+    .files input {
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 50px 0px 85px 15%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+    .files input:focus{     
+        outline: 2px dashed #92b0b3;  outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+    }
+    .files{ position:relative}
+    
+    .files:before {
+        position: absolute;
+        bottom: 10px;
+        left: 0;  pointer-events: none;
+        width: 100%;
+        right: 0;
+        height: 57px;
+        content: " or drag it here. ";
+        display: block;
+        margin: 0 auto;
+        color: #2ea591;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div class="container col-xl-5 col-md-6 mt-4  " alt="Max-height 100%" >
+        <div class="d-flex text-center align-items-center mb-4 pb-1">
+            <a href="dashboard.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+            <i class="fa-solid fa-capsules px-3 fa-3x"></i>
+            <h4 class="  text-center" > Outpatient Clinical</h4>
+        </div>
+        <div class="card col-md-12 col-lg-10" style="max-width: 530px; border-radius:30px ; background-color: #226596 ;">
+            <div class="" style="padding:20px 30px 0px 30px;">
+                <div class="box02  text-center ">
+                <h5 class=" border-2 p-3 text-center" style="background-color:#FFF;border-radius:30px ;" >Submit Medical Claim </h5>
+                </div>
+            </div>
+            <div class="mb-3 px-3" >
+                <div class="col-md-12 col-xl-12 ">
+                    <form id="claimform" >
+                        <!-- progressbar -->
+                        <ul id="progressbar" class="mt-2" style="padding-left: 1px;">
+                            <li class="active" id="step1"><strong></strong></li>
+                            <li id="step2"><strong></strong></li>
+                            <li id="step3"><strong></strong></li>
+                            <li id="confirm"><strong></strong></li>
+                        </ul>
+                        <!-- fieldsets -->
+                        <fieldset >
+                            <div class="form-bar" >
+                                <div class="mt-2">
+                                    <h5 class="float-start">Claim Detail</h5>
+                                    <h6 class="float-end text-danger">Required **</h6>
+                                </div>
+                                <br>
+                                <div class="form-outline mb-2 mt-2">
+                                    <label class="member" for="select_mem">Member : </label>
+                                    <select class=" form-select form-select ">
+                                    <option>Jackson</option>
+                                    <option>Dependent</option>
+                                    <option>Dependent</option>
+                                    <option>Dependent</option>
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-2 ">
+                                    <label class="date" for="date">Medical Date : </label>
+                                    <input type="date" name="date" class="form-control input-sm" placeholder="20/05/2020"/>
+                                </div>
+                                <div class="form-outline mb-2 ">
+                                    <label class="amount" for="amount">Claim Amount :  <strong>  RM </strong></label>
+                                    <input type="number" name="amount" class="form-control input-sm" placeholder="50.00"/>
+                                </div>
+                                <div class="form-outline mb-2 ">
+                                    <label class="note" for="note">Notes : </label>
+                                    <input type="text" name="note" class="form-control input-sm" placeholder="Write your note here"/>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="btn next action-button" value="Next Step"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-bar">                                        
+                                <h5 class="fs-title">Submit Documents</h5>
+                                <div class="icon d-flex ">
+                                    <i class="float-start fa-solid fa-bell" style="font-size:20px; color: #FEEE60;"></i>
+                                    <h5 class="px-3 fs-6">Invoice <span class="text-danger"> ** </span> </h5>
+                                </div>                                        
+                                <h6 class="fs-6 mt-2">Upload Document</h6>        
+                                <div class=" fileupload">
+                                    <div class="col-sm-12 col-xl-12">
+                                        <div class="form-group files ">
+                                            <label>Upload Your File </label>
+                                            <input type="file" class="form-control-sm input-sm "  multiple="">
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div>
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next Step"/>
+                        </fieldset>
+                        <fieldset>                                           
+                            <div class="form-bar ">
+                                <h5 class="fs-title">Confirm Your information</h5>
+                                <h6 class="fs-title">Claim Detail</h6>
+                                <div class="form-outline mb-4 ">
+                                    <label class="member" for="select_mem">Member : </label>
+                                    <input type="text" name="member" class="form-control input-sm" placeholder="Jackson" disabled/>
+                                </div>
+                                <div class="form-outline mb-4 ">
+                                    <label class="policy_num" for="policy_num">Policy Number : </label>
+                                    <input type="text" name="policy_num" class="form-control input-sm" placeholder="BP 00900" disabled/>
+                                </div>
+                                <div class="form-outline mb-4 ">
+                                    <label class="date" for="date">Medical Date : </label>
+                                    <input type="date" name="date" class="form-control input-sm" placeholder="20/05/2020" disabled/>
+                                </div>
+                                <div class="form-outline mb-4 ">
+                                    <label class="amount" for="amount">Claim Amount :  <strong>  RM </strong></label>
+                                    <input type="number" name="amount" class="form-control input-sm" placeholder="50.00" disabled/>
+                                </div>
+                                <div class="form-outline mb-4 ">
+                                    <label class="note" for="note">Notes : </label>
+                                    <input type="text" name="note" class="form-control" placeholder="Write your note here" disabled/>
+                                </div>
+                                <h6 class="fs-6 mt-2">Upload Document</h6>
+                                <div class="col-md-12">
+                                files 
+                                </div>
+                            </div>
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                            <input type="button" name="next" class="next action-button" value="Next Step"/>  
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-bar text-center">
+                                <h2 class="fs-title ">Success !</h2>
+                                <br><br>
+                                <div class="row text-center justify-content-center">
+                                    <div class="col">
+                                    <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="">
+                                    <h5>You Have Successfully Submit Your Medical Claim</h5>
+                                    <p>Below is your claim number</p>
+                                    <p> Reference Number : </p>
+                                    <p> Claim Number : </p>
+                                    <p> Name :</p>
+                                    <p> Policy Number :</p>
+                                    <p> Submit Time : </p>
+                                    <p> File.pdf</p>
+                                    <input type="button" onclick="location.href='dashboard.html'" class="btn action-button" value="Confirm"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form> 
+                </div>
+            </div>        
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="../js/claim/claim_step.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Reset Password</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+
+    <style>
+  
+    /**/
+    .login-color{
+      background-color: #F5F5F5;
+      max-width: 400px;
+      border-radius: 20px;
+    
+      position: relative;
+
+      width: 100%;
+      height:auto;
+      margin: 0 auto;
+    }
+
+
+    .form-control {
+      background: transparent;
+      border: none;
+      height: 50px;
+      color: black !important;
+      border: 1px solid transparent;
+      background: rgba(171, 195, 255, 100);
+      border-color: rgba(34, 101, 150, 100); 
+      border-radius: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      @media (prefers-reduced-motion: reduce) {
+        .form-control {
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none; } }
+      .form-control::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: rgba(0, 0, 0, 100) !important; }
+      .form-control::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(0, 0, 0, 100) !important; }
+      .form-control:-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgba(0, 0, 0, 100) !important; }
+      .form-control:-moz-placeholder {
+        /* Firefox 18- */
+        color: rgba(0, 0, 0, 100) !important; }
+      .form-control:hover, .form-control:focus {
+        background: transparent;
+        background: rgba(171, 195, 255, 0.50);
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: rgba(34, 101, 150, 0.50); }
+      .form-control:focus {
+        border-color: rgba(34, 101, 150, 0.50); }
+
+        @media(max-width:991px){
+      .content-desktop{
+        display:none;
+      }     
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container col-xl-12 col-md-6 mt-4">
+      <!--Header Mobile Version-->
+      <div class="d-flex text-center align-items-center mb-4 pb-1">
+        <a href="forgot-pass.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+        <h4 class="text-center px-3" >Reset Password</h4>
+      </div>
+      <!--Body Mobile Version-->
+      <div class="row">
+        <!--desktop img view-->
+        <div class="col-xl-6 me-auto">
+          <div class="feedback-container content-desktop" id="alert-dialog">
+            <i class="fa-solid fa-image" style="font-size: 400px;"></i>
+          </div>
+        </div>
+        <div class="col-xl-6 ms-auto mt-4">
+          <div class="login-color px-4 offset-lg-1 py-2">
+            <!---Reset Password (form issues cant href and modal)-->
+            <div class="form-group my-4 px-2">                            
+              <label >New Password  :</label>
+              <input  type="" name="password-01" class="form-control col-md-10"/>
+            </div>
+            <div class="form-group my-4 px-2">                            
+              <label >Confirm Password  :</label>
+              <input  type="" name="password-02" class="form-control col-md-10"/>
+            </div>
+            <div class="form-group text-center">
+              <button  class="btn btn-primary submit px-3 my-2" data-bs-toggle="modal" data-bs-target="#reset-confirm">Reset Password</button>
+            </div>
+          <div class="alert alert-info" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Modal Confirm reset-->
+    <div class="modal fade" id="reset-confirm" tabindex="-1" aria-labelledby="reset-confirmLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reset-confirmLabel">Confirm Change your password ?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure want to change password
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Modal-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+  </body>
+</html>

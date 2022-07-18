@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Benefits - Company </title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-header.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+   
+    /*sub tab */
+    .profile-head .nav-tabs{
+    margin-bottom:5%;
+    }
+
+    .profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+    color: #827688;
+    }
+
+    .profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #714288;
+    color: #714288;
+    }
+
+
+    .profile-tab label{
+    font-weight: 600;
+    }
+
+    .profile-tab p{
+    font-weight: 600;
+    color: #714288;
+    }
+    .button-1{
+    background-color: #714288;
+    border: none;
+    }
+    .profile-head i{
+    font-size: 65px;
+    color: #714288;
+    }
+
+    /*icon-back*/
+    .icon-background{
+    color: #714288;
+    }
+
+    .button-1{
+      background-color: #714288;
+      border: none;
+    }
+
+    /*subsub link*/
+    .job-tab .nav-tabs {
+        margin-bottom: 30px;
+        border-bottom: 0;
+    }
+
+    .job-tab .nav-tabs>li {
+        float: none;
+        display: inline;
+    }
+
+    .job-tab .nav-tabs li {
+        margin-right: 15px;
+    }
+
+    .job-tab .nav-tabs li:last-child {
+        margin-right: 0;
+    }
+
+    .job-tab .nav-tabs {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+
+    .job-tab .nav-tabs:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        z-index: -1;
+    }
+
+    .job-tab .nav-tabs>li a {
+        display: inline-block;
+        background-color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 14px;
+        color: #000;
+        padding: 5px 30px;
+    }
+
+    .job-tab .nav-tabs>li>a.active, 
+    .job-tab .nav-tabs>li a.active>:focus, 
+    .job-tab .nav-tabs>li>a.active:hover,
+    .job-tab .nav-tabs>li>a:hover {
+        border: none;
+        background-color: #714288;
+        color: #fff;
+    }
+    </style>
+  </head>
+  <body > 
+    <div class="wrapper container-fluid">
+      <!-- Sidebar  -->
+      <div class="row d-flex"> 
+        <nav id="sidebar" class=" px-4" >
+          <div class="sidebar-header">
+            <div class="logo"><a href="index.html" class=" text-white text-decoration-none">
+              <!-- <img src="images/logo.png" alt="" /> --><h4>LOGO</h4></a>
+            </div>
+          </div>
+          <ul class="list-unstyled components">
+            <li class="label mb-2">HR</li>
+            <li><a href="dashboard.html" class="nav-link"> <i class="fa-solid fa-house-chimney px-2 "></i> Dashboard </a></li>
+            <li><a href="claim.html" class="nav-link "> <i class="fa-solid fa-file-lines px-2 "></i> Claim Status </a></li>
+            <li><a href="report.html" class="nav-link  "> <i class="fa-solid fa-pencil px-2 "></i> Reports</a></li>
+            <li><a href="finance.html" class="nav-link "><i class="fa-solid fa-money-bill-wave px-2 "></i>Finance</a></li>
+            <li class="label mb-2 mt-2">YOUR COMPANY</li>
+            <!--collapse-->
+            <li>
+              <a href="company-profile.html"  class="nav-link "> <i class="fa-solid fa-landmark px-2 "></i> Company Profile</a>
+    
+            </li>
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-wrench px-2"></i> Employee</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li><a href="new-employee-depart.html" class="nav-link  px-5"> </i> Employee & department</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#pageSubmenu02" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-hand-holding-dollar px-2"></i> Benefits</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu02">
+                <li class="active"><a href="benefits.html" class="nav-link px-5"> Overview & Plan   </a></li>
+                <li><a href="policy-holder.html" class="nav-link  px-5"> </i> Member Policy </a></li>
+              </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu03">
+                  <li><a href="current-plan.html" class="nav-link  px-5"> </i> Plan Reference</a></li>
+                  <li><a href="addon.html" class="nav-link px-5"> </i>Custom Feature</a></li>
+                </ul>
+              </li>
+            <!--./collapse-->
+          </ul>
+        </nav>
+      </div>  
+
+      <!-- Page Content  -->
+      <div id="content" class="col" >   
+        <!--Topbar-->        
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <div class="float-left">
+            <a type="button" id="sidebarCollapse" class="btn btn-white"><i class="fas fa-align-left"></i></a>                    
+          </div>
+          <!-- Topbar Search -->
+          <ul class="navbar-nav ms-auto" id="topbar">
+            <!--Notification Message-->
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown">
+                <i class="fa fa-bell"></i><span class="badge bg-danger badge-counter ">3+</span>
+              </a>
+              <div class="dropdown-menu notidrop">
+                <h6 class="dropdown-header">Alerts Center</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                      <i class="fa fa-file"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small ">March 12, 2020</div>
+                    <span class="font-weight-bold">related snippets sent</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                    <i class="fa fa-user"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small ">Feb 7, 2020</div>
+                    you updated your profile!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                    <i class="fa fa-download"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small">Jan 2, 2020</div>
+                    You just downloaded 3 snippets
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small" href="notification.html">Show All</a>
+              </div>
+            </li>
+            <!--Dropdown Message-->
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+                <i class="fa fa-envelope" ></i><span class="badge bg-danger badge-counter">4</span>
+              </a>      
+              <div class="dropdown-menu normaldrop">
+                <h6 class="dropdown-header">Messages</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/nUNhspp.jpg" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Thanks for your answer!</div>
+                    <div class="small">Andy flower &middot; 8m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Can you answer bbb?</div>
+                    <div class="small">John wrong &middot; 4h</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/HjKTNkG.jpg" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Your work is awesome</div>
+                    <div class="small"> Stanley &middot; 12h</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Thanks for your support</div>
+                    <div class="small">grand misi &middot; 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small" href="#">Read all Messages</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <!--Logout setting-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" id="userDropdown" data-toggle="dropdown">
+                <span class="me-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg">
+              </a>
+              <div class="dropdown-menu special " aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="myprofile.html">
+                  <i class="fa fa-user me-2 "></i>Profile
+                </a>
+                <a class="dropdown-item" href="changing-pass.html">
+                  <i class="fa fa-cogs me-2"></i>Forgot Password
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login.html" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fa fa-sign-out me-2"></i>Logout
+                </a>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        <!--./Topbar--> 
+        <div class="justify-content-between d-flex">
+          <!--Header Title Left-->
+          <div class="float-start">
+            <div class="page-header">
+              <div class="page-title">
+                <h3>Benefits</h3>
+                <span>You can view overview for your benefits and assign policy acc to employee</span>
+              </div>
+            </div>
+          </div>
+          <!--Header Title Right-->
+          <div class="float-end">
+            <div class="page-header ">
+              <div class="page-title">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Benefits / Overview & Plan</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Alert Message-->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.         
+          <button type="button" class="btn-close close text-reset" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn  text-reset" > Quick Start</button>
+        </div>
+        <!-----------------------------
+          Start You Code Here
+        ------------------------------>
+        <div class="container-fluid" >
+          <div class="col-md-12 ">
+            <div class="profile-head mt-5 ">
+              <!-- Tab benefit -->
+              <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item px-3" >
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Benefits Overview </a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Company Plan</a>
+                </li>
+                <hr class="mb-5">
+              </ul>
+              <!--./ Tab benefit -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="tab-content profile-tab" id="myTabContent">
+                <!--First Tab-->
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="job-tab mb-5">
+                    <div class="text-center">
+                      <!--Tab Plan A & B-->
+                      <ul class="nav nav-tabs justify-content-center" role="tablist">
+                        <li role="presentation" class="active">
+                            <a class="active show text-decoration-none" href="#plan-a" aria-controls="plan-a" role="tab" data-toggle="tab" aria-selected="true">Plan A</a>
+                        </li>
+                        <li role="presentation"><a href="#plan-b" aria-controls="plan-b" role="tab" data-toggle="tab" class="text-decoration-none" aria-selected="false">Plan B</a></li>
+                      </ul>
+                      <!--./Tab Plan A & B-->
+                    </div>
+                    <div class="tab-content text-left">
+                        <!--Tab-A-->
+                        <div role="tabpanel" class="tab-pane fade active show" id="plan-a">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-12 col-sm-12 px-5 ">
+                                    <div class="profile-header  ">
+                                        <h4>Your Plan </h4>
+                                        <p>Plan A </p>Basic Policy
+                                    </div>
+                                    <div class="card mt-3 ms-3">
+                                        <div class="card-header">
+                                            <h6>Available Balance </h6>
+                                            <p class="text-center">RM 120,000.00</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Cashless service's reserved amount</h6>
+                                            <p>RM 100,000.00</p>       
+                                            <h6>Digital Claim payout quota</h6>
+                                            <p>RM 20,000.00</p> 
+                                        </div>
+                                    </div>
+                                    <div class="profile-header mt-5 ">
+                                        <h4>Total Limit  </h4>
+                                        limit of amount per annually
+                                    </div>
+                                    <div class="card mt-3 ms-3">
+                                        <div class="card-header">
+                                            <h6>Limit Maximum </h6>
+                                            <p class="text-center">RM 200,000.00</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-xl-6 col-md-12 col-sm-12 mt-5 px-5"> 
+                                    <div class="home-body px-5 mt-5  pt-4 pb-4 card">
+                                        <div>Plan Usage</div>
+                                        <p class="progress-title mt-3">Cashless</p>
+                                        <div class="progress-outer">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" style="width:50%;"></div>
+                                                <div class="progress-value"> <span> 50</span>% usage</div>
+                                            </div>
+                                        </div>
+                                        <p class="progress-title mt-3">E-Claim</p>
+                                        <div class="progress-outer">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" style="width:75%;"></div>
+                                                <div class="progress-value"> <span> 85</span>% usage</div>
+                                            </div>
+                                        </div>
+
+                                        <a class="mt-5 text-center text-decoration-none fst-italic" target="_blank" href="plan-member.html">View member</a>
+                                        
+                                    </div>
+                                </div>      
+                            </div><!-- /.row -->
+                        </div><!-- /.tab-pane -->
+                        <!--Tab-B-->
+                        <div role="tabpanel" class="tab-pane fade" id="plan-b">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-12 col-sm-12 px-5 ">
+                                    <div class="profile-header  ">
+                                        <h4>Your Plan </h4>
+                                        <p>Plan B </p>Pro Policy
+                                    </div>
+                                    <div class="card mt-3 ms-3">
+                                        <div class="card-header">
+                                            <h6>Available Balance </h6>
+                                            <p class="text-center">RM 220,000.00</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <h6>Cashless service's reserved amount</h6>
+                                            <p>RM 120,000.00</p>       
+                                            <h6>Digital Claim payout quota</h6>
+                                            <p>RM 100,000.00</p> 
+                                        </div>
+                                    </div>
+                                    <div class="profile-header mt-5 ">
+                                        <h4>Total Limit  </h4>
+                                        limit of amount per annually
+                                    </div>
+                                    <div class="card mt-3 ms-3">
+                                        <div class="card-header">
+                                            <h6>Limit Maximum </h6>
+                                            <p class="text-center">RM 300,000.00</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-xl-6 col-md-12 col-sm-12 mt-5 px-5"> 
+                                    <div class="home-body px-5 mt-5  pt-4 pb-4 card">
+                                        <div>Plan Usage</div>
+                                        <p class="progress-title mt-3">Cashless</p>
+                                        <div class="progress-outer">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" style="width:30%;"></div>
+                                                <div class="progress-value"> <span> 30</span>% usage</div>
+                                            </div>
+                                        </div>
+                                        <p class="progress-title mt-3">E-Claim</p>
+                                        <div class="progress-outer">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" style="width:5%;"></div>
+                                                <div class="progress-value"> <span> 5</span>% usage</div>
+                                            </div>
+                                        </div>
+
+                                        <a class="mt-5 text-center text-decoration-none fst-italic" target="_blank" href="plan-member.html">View member</a>
+                                        
+                                    </div>
+                                </div>      
+                            </div><!-- /.row -->
+                        </div><!-- /.tab-pane -->
+                    </div>
+                  </div>
+                </div>                     
+                <!--Second Tab-->
+                <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="row ">
+                    <div class="col-md-4 ms-auto">
+                      <div class="dropdown ">
+                        <a  href="#" class="dropdown-toggle fa-stack fa-1x  px-4 " id="plandropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                            <i class="fa-solid fa-gear  fa-stack-1x text-white" ></i>
+                        </a> 
+                        <div class="dropdown-menu special" aria-labelledby="plandropdown">
+                          <a class="dropdown-item text-center mt-2" href="#">
+                            <p>Policy Holders</p> 
+                            <h6>Set policy holder <br> for employee</h6>
+                          </a>
+                          <a class="dropdown-item text-center" href="#">
+                            <p>Add/Edit</p> 
+                            <h6>add policy <br>or delete policy</h6>
+                          </a>
+                          <a class="dropdown-item text-center" href="#">
+                            <p>Custom features</p> 
+                            <h6> add new features?</h6>
+                          </a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 text-center mb-4"> 
+                      <div class="profile-head">
+                        <i class="fa-solid fa-circle-dollar-to-slot px-2 mb-2"></i>
+                        <h5>Company Plan</h5>
+                        <h6>Create a Name for each plan that you purchased</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="row ">
+                      <div class="col-md-6 mt-5 text-center">
+                        <i class="fa-solid fa-plane-up mt-3 mb-4" style="font-size: 50px;"></i>
+                        <div class="advanced-header text-center">
+                            Advanced Plan 
+                        </div>
+                        <div class="advanced-body text-center mt-3" >
+                          <a href="current-plan.html" class="text-decoration-none">View More Detail</a>
+                        </div>
+                      </div>  
+                      <div class="col-md-6 mt-2"> 
+                        <div class="home-body px-5 pt-4 pb-4 card">
+                          <div class="form-group">
+                            <label for="examplePolicyName">Policy Name</label>
+                            <input type="text" class="form-control" id="examplePolicyName" placeholder="Basic Policy ">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleAmount">Policy Amount Max</label>
+                            <input type="number" class="form-control" id="exampleAmount" placeholder="RM 20,000.00">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleDescription">Policy Description (optional)</label>
+                            <textarea type="text" class="form-control" id="exampleDescription" placeholder="Basic employee - working experiance less than 2 years"></textarea>
+                          </div> 
+                        </div>
+                      </div>  
+                    </div>
+                    <div class="row mt-5">
+                      <div class="col-md-6"> 
+                        <div class="home-body px-5 pt-4 pb-4 card">
+                          <div class="form-group">
+                              <label for="examplePolicyName">Policy Name</label>
+                              <input type="text" class="form-control" id="examplePolicyName" placeholder="Pro Policy ">
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleAmount">Policy Amount Max</label>
+                              <input type="number" class="form-control" id="exampleAmount" placeholder="RM 60,000.00">
+                          </div>
+                          <div class="form-group">
+                              <label for="exampleDescription">Policy Description (optional)</label>
+                              <textarea type="text" class="form-control" id="exampleDescription" placeholder="Basic employee - working experiance more than 2 years"></textarea>
+                          </div> 
+                        </div>
+                      </div>  
+                      <div class="col-md-6 mt-5 text-center">
+                        <i class="fa-solid fa-rocket mt-3 mb-4" style="font-size: 50px;" ></i>
+                        <div class="pro-header text-center">
+                            Premium Plan 
+                        </div>
+                        <div class="pro-body text-center mt-3" >
+                          <a href="current-plan.html" class="text-decoration-none">View More Detail</a>
+                        </div>
+                      </div>                                      
+                    </div>                             
+                    <div class="col-md-12 text-center mt-5 mb-5" >
+                      <button class="btn btn-primary button-1" type="submit" >Save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+    });
+
+    $(document).ready(function(){
+      $('.progress-value > span').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 1500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+      });
+    });
+    </script>
+   
+  </body>
+</html>
+

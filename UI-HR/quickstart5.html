@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Quick Start 5</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-header.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+    /*icon-back*/
+    .icon-background{
+    color: #714288;
+    }
+
+    </style>
+  </head>
+  <body > 
+    <div class="wrapper container-fluid">
+      <!-- Sidebar  -->
+     <div class="row d-flex"> 
+      <nav id="sidebar" class=" px-4" >
+        <div class="sidebar-header">
+          <div class="logo"><a href="index.html" class=" text-white text-decoration-none">
+            <!-- <img src="images/logo.png" alt="" /> --><h4>LOGO</h4></a>
+          </div>
+        </div>
+        <ul class="list-unstyled components">
+          <li class="label mb-2">HR</li>
+          <li><a href="dashboard.html" class="nav-link"> <i class="fa-solid fa-house-chimney px-2 "></i> Dashboard </a></li>
+          <li><a href="claim.html" class="nav-link "> <i class="fa-solid fa-file-lines px-2 "></i> Claim Status </a></li>
+          <li><a href="report.html" class="nav-link  "> <i class="fa-solid fa-pencil px-2 "></i> Reports</a></li>
+          <li><a href="finance.html" class="nav-link "><i class="fa-solid fa-money-bill-wave px-2 "></i>Finance</a></li>
+          <li class="label mb-2 mt-2">YOUR COMPANY</li>
+          <!--collapse-->
+          <li>
+            <a href="company-profile.html"  class="nav-link "> <i class="fa-solid fa-landmark px-2 "></i> Company Profile</a>
+  
+          </li>
+          <li>
+            <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-wrench px-2"></i> Employee</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li ><a href="new-employee-depart.html" class="nav-link  px-5"> </i> Employee & department</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu02" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-hand-holding-dollar px-2"></i> Benefits</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu02">
+              <li><a href="benefits.html" class="nav-link px-5"> Overview & Plan   </a></li>
+              <li><a href="policy-holder.html" class="nav-link  px-5"> </i> Member Policy </a></li>
+            </ul>
+          </li>
+          <li>
+              <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu03">
+                <li><a href="current-plan.html" class="nav-link  px-5"> </i> Plan Reference</a></li>
+                <li><a href="addon.html" class="nav-link px-5"> </i>Custom Feature</a></li>
+              </ul>
+            </li>
+          <!--./collapse-->
+        </ul>
+      </nav>
+    </div>  
+
+    <!-- Page Content  -->
+    <div id="content" class="col" >   
+      <!--Topbar-->        
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <div class="float-left">
+          <a type="button" id="sidebarCollapse" class="btn btn-white"><i class="fas fa-align-left"></i></a>                    
+        </div>
+        <!-- Topbar Search -->
+        <ul class="navbar-nav ms-auto" id="topbar">
+          <!--Notification Message-->
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown">
+              <i class="fa fa-bell fa-fw"></i><span class="badge bg-danger badge-counter ">3+</span>
+            </a>
+            <div class="dropdown-menu notidrop">
+              <h6 class="dropdown-header">Alerts Center</h6>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="me-3">
+                  <div class="icon-circle">
+                    <i class="fa fa-file"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small">March 12, 2020</div>
+                  <span class="font-weight-bold">related snippets sent</span>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="me-3">
+                  <div class="icon-circle">
+                  <i class="fa fa-user"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small">Feb 7, 2020</div>
+                  you updated your profile!
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="me-3">
+                  <div class="icon-circle">
+                  <i class="fa fa-download"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small">Jan 2, 2020</div>
+                  You just downloaded 3 snippets
+                </div>
+              </a>
+              <a class="dropdown-item text-center small" href="notification.html">Show All</a>
+            </div>
+          </li>
+          <!--Dropdown Message-->
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+              <i class="fa fa-envelope" ></i><span class="badge bg-danger badge-counter">4</span>
+            </a>      
+            <div class="dropdown-menu normaldrop">
+              <h6 class="dropdown-header">Messages</h6>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image me-3">
+                  <img class="rounded-circle" src="https://i.imgur.com/nUNhspp.jpg" alt="">
+                  <div class="status-indicator bg-success"></div>
+                </div>
+                <div class="font-weight-bold">
+                  <div class="text-truncate">Thanks for your answer!</div>
+                  <div class="small ">Andy flower &middot; 8m</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image me-3">
+                  <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                  <div class="status-indicator"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">Can you answer bbb?</div>
+                  <div class="small">John wrong &middot; 4h</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image me-3">
+                  <img class="rounded-circle" src="https://i.imgur.com/HjKTNkG.jpg" alt="">
+                  <div class="status-indicator bg-warning"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">Your work is awesome</div>
+                  <div class="small"> Stanley &middot; 12h</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image me-3">
+                  <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                  <div class="status-indicator bg-success"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">Thanks for your support</div>
+                  <div class="small">grand misi &middot; 2w</div>
+                </div>
+              </a>
+              <a class="dropdown-item text-center small" href="#">Read all Messages</a>
+            </div>
+          </li>
+          <div class="topbar-divider d-none d-sm-block"></div>
+          <!--Logout setting-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="userDropdown" data-toggle="dropdown">
+              <span class="me-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+              <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg">
+            </a>
+            <div class="dropdown-menu special " aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="myprofile.html">
+                <i class="fa fa-user fa-sm fa-fw me-2 "></i>Profile
+              </a>
+              <a class="dropdown-item" href="changing-pass.html">
+                <i class="fa fa-cogs me-2 "></i>Forgot Password
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login.html" data-toggle="modal" data-target="#logoutModal">
+                <i class="fa fa-sign-out me-2"></i>Logout
+              </a>
+            </div>
+          </li>
+        </ul>  
+      </nav>
+      <!--./Topbar--> 
+      <div class="justify-content-between d-flex">
+        <!--Header Title Left-->
+        <div class="float-start">
+          <div class="page-header">
+            <div class="page-title">
+              <h3>Quick Start</h3>
+              <span>Your Performance during This Week </span>
+            </div>
+          </div>
+        </div>
+       <!--Header Title Right-->
+        <div class="float-end">
+          <div class="page-header ">
+            <div class="page-title">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Quick Start</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- /# column -->
+      </div>
+        <!-----------------------------
+          Start You Code Here
+        ------------------------------>
+        <div class="container" >
+          <div class="row card my-5">
+            <div class=" fade show " role="">
+              <button type="button" class="float-end btn close text-reset" onclick="location.href='quickstart7.html'">Skip</button>
+              <div class="text-center my-5">
+                <h3><b>Step 3 :  Update Your Company Profile</b></h3> 
+                <div class="col-md-4 offset-lg-4 mt-5">
+                  <div class="mb-2 mt-2 d-flex justify-content-center align-items-center">
+                    <div class="px-2 me-5">
+                      <i class="fa-solid fa-landmark fa-3x icon-background "></i>
+                    </div>
+                    <div class="px-2 ">
+                        Company
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            
+              <div class="text-center mb-5">
+                <button type="button" class="btn  btn-danger" onclick="location.href='quickstart6.html'"> Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+      });
+    });
+    </script>
+   
+  </body>
+</html>
+
