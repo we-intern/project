@@ -26,59 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
     <style>
-    /* Custom checkbox */
-     .custom-checkbox {
-      position: relative;
-    }
-    .custom-checkbox input[type="checkbox"] {    
-      opacity: 0;
-      position: absolute;
-      margin: 5px 0 0 3px;
-      z-index: 9;
-    }
-    .custom-checkbox label:before{
-      width: 18px;
-      height: 18px;
-    }
-    .custom-checkbox label:before {
-      content: '';
-      margin-right: 10px;
-      display: inline-block;
-      vertical-align: text-top;
-      background: white;
-      border: 1px solid #bbb;
-      border-radius: 2px;
-      box-sizing: border-box;
-      z-index: 2;
-    }
-    .custom-checkbox input[type="checkbox"]:checked + label:after {
-      content: '';
-      position: absolute;
-      left: 6px;
-      top: 3px;
-      width: 6px;
-      height: 11px;
-      border: solid #000;
-      border-width: 0 3px 3px 0;
-      transform: inherit;
-      z-index: 3;
-      transform: rotateZ(45deg);
-    }
-    .custom-checkbox input[type="checkbox"]:checked + label:before {
-      border-color: #03A9F4;
-      background: #03A9F4;
-    }
-    .custom-checkbox input[type="checkbox"]:checked + label:after {
-      border-color: #fff;
-    }
-    .custom-checkbox input[type="checkbox"]:disabled + label:before {
-      color: #b8b8b8;
-      cursor: auto;
-      box-shadow: none;
-      background: #ddd;
-    }
-   
-
     /*icon-back*/
     .icon-background{
     color: #714288;
@@ -140,7 +87,7 @@
           <li class="label mb-2">HR</li>
           <li><a href="dashboard.html" class="nav-link"> <i class="fa-solid fa-house-chimney px-2 "></i> Dashboard </a></li>
           <li><a href="claim.html" class="nav-link "> <i class="fa-solid fa-file-lines px-2 "></i> Claim Status </a></li>
-          <li><a href="report.html" class="nav-link  "> <i class="fa-solid fa-pencil px-2 "></i> Reports</a></li>
+          <li class="active"><a href="report.html" class="nav-link  "> <i class="fa-solid fa-pencil px-2 "></i> Reports</a></li>
           <li><a href="finance.html" class="nav-link "><i class="fa-solid fa-money-bill-wave px-2 "></i>Finance</a></li>
           <li class="label mb-2 mt-2">YOUR COMPANY</li>
           <!--collapse-->
@@ -149,20 +96,20 @@
   
           </li>
           <li>
-            <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-wrench px-2"></i> Employee</a>
+            <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-wrench px-2"></i> Employee <i class="fa-solid fa-angle-down small px-2"></i></a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li class="active"><a href="new-employee-depart.html" class="nav-link  px-5"> </i> Employee & department</a></li>
+              <li><a href="new-employee-depart.html" class="nav-link  px-5"> </i> Employee & department</a></li>
             </ul>
           </li>
           <li>
-            <a href="#pageSubmenu02" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-hand-holding-dollar px-2"></i> Benefits</a>
+            <a href="#pageSubmenu02" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-hand-holding-dollar px-2"></i> Benefits<i class="fa-solid fa-angle-down small px-2"></i></a>
             <ul class="collapse list-unstyled" id="pageSubmenu02">
               <li><a href="benefits.html" class="nav-link px-5"> Overview & Plan   </a></li>
               <li><a href="policy-holder.html" class="nav-link  px-5"> </i> Member Policy </a></li>
             </ul>
           </li>
           <li>
-              <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support</a>
+              <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support <i class="fa-solid fa-angle-down small px-2"></i></a>
               <ul class="collapse list-unstyled" id="pageSubmenu03">
                 <li><a href="current-plan.html" class="nav-link  px-5"> </i> Plan Reference</a></li>
                 <li><a href="addon.html" class="nav-link px-5"> </i>Custom Feature</a></li>
@@ -321,12 +268,13 @@
           </div>
        
         </div>
-           <!--Alert Message-->
-           <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.         
-            <button type="button" class="btn-close close text-reset" data-bs-dismiss="alert" aria-label="Close"></button>
-            <button type="button" class="btn  text-reset" > Quick Start</button>
-          </div>
+        <!--Alert Message-->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Welcome to Healthcare Admin Portal !</strong> 
+          <h6 class="mt-2">Take a few minutes and get up to speed with our key modules in less than 15 minutes.</h6>       
+          <button type="button" class="btn-close close text-reset" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn  btn-danger " aria-label="Close"  onclick="location.href='quickstart.html'"> Quick Start</button>
+        </div>
         <!--Start You Code Here-->
         <div class="container " >
             <!--Third Tab-->

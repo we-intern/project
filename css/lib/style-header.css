@@ -20,7 +20,11 @@ border-radius: 0;
 margin-bottom: 40px;
 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-
+#sidebar{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 550;  
+}
 
 /* ---------------------------------------------------
             SIDEBAR STYLE

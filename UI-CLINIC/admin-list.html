@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>List of admin</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-clinic.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+    /*icon-back
+    .icon-background{
+    color: #714288;
+    }
+    .button-1{
+      background-color: #714288;
+      border: none;
+    }*/
+    </style>
+  </head>
+  <body > 
+    <div class="wrapper container-fluid">
+      <!-- Sidebar  -->
+      <div class="row d-flex"> 
+        <nav id="sidebar" class=" px-4" >
+          <div class="sidebar-header">
+            <div class="logo"><a href="index.html" class=" text-white text-decoration-none">
+              <!-- <img src="images/logo.png" alt="" /> --><h4>LOGO</h4></a>
+            </div>
+          </div>
+          <ul class="list-unstyled components">
+            <li class="label mb-2">YOU</li>
+            <li><a href="dashboard.html" class="nav-link"> <i class="fa-solid fa-house-chimney px-2"></i> Dashboard </a></li>
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-clipboard-user px-2"></i> Patient <i class="fa-solid fa-angle-down small px-2"></i></a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li><a href="patient.html" class="nav-link px-4"><i class="fa-solid fa-clipboard-user px-1"></i> Patient </a></li>
+                <li><a href="patient-waitinglist.html" class="nav-link px-4"> <i class="fa-solid fa-right-to-bracket px-1"></i> Check In List </a></li>
+                <li><a href="bill.html" class="nav-link px-4"><i class="fa-solid fa-coins px-1"></i> Payment & Bill</a></li>
+              </ul>
+            </li>
+            <li><a href="payment-history.html" class="nav-link"> <i class="fa-solid fa-file-lines px-2"></i> History</a></li>
+            <li><a href="appointment-check.html" class="nav-link"><i class="fa-solid fa-calendar-days px-2"></i> Appointment</a></li>
+            <li class="label mb-2 mt-2">CLINIC</li>
+            <!--collapse-->
+            <li>
+              <a href="clinic-profile.html"  class="nav-link"><i class="fa-solid fa-kit-medical px-2"></i> Clinic Profile</a>
+    
+            </li>
+            <li class="active">
+              <a href="admin-list.html"  class="nav-link "> <i class="fa-solid fa-users px-2"></i> Staff List</a>
+            </li>
+            <!--./collapse-->
+          </ul>
+        </nav>
+      </div> 
+
+      <!-- Page Content  -->
+      <div id="content" class="col" >   
+        <!--Topbar-->        
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <div class="float-left">
+            <a type="button" id="sidebarCollapse" class="btn btn-white"><i class="fas fa-align-left"></i></a>                    
+          </div>
+          <!-- Topbar Search -->
+          <ul class="navbar-nav ms-auto" id="topbar">
+            <!--Notification Message-->
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown">
+                <i class="fa fa-bell"></i><span class="badge bg-danger badge-counter ">3+</span>
+              </a>
+              <div class="dropdown-menu notidrop">
+                <h6 class="dropdown-header">Alerts Center</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                      <i class="fa fa-file"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small ">March 12, 2020</div>
+                    <span class="font-weight-bold">related snippets sent</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                    <i class="fa fa-user"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small ">Feb 7, 2020</div>
+                    you updated your profile!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="me-3">
+                    <div class="icon-circle">
+                    <i class="fa fa-download"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small ">Jan 2, 2020</div>
+                    You just downloaded 3 snippets
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small " href="#">Show All</a>
+              </div>
+            </li>
+            <!--Dropdown Message-->
+            <li class="nav-item dropdown mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+                <i class="fa fa-envelope" ></i><span class="badge bg-danger badge-counter">4</span>
+              </a>      
+              <div class="dropdown-menu normaldrop">
+                <h6 class="dropdown-header">Messages</h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/nUNhspp.jpg" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Thanks for your answer!</div>
+                    <div class="small ">Andy flower &middot; 8m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                    <div class="status-indicator"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Can you answer bbb?</div>
+                    <div class="small ">John wrong &middot; 4h</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/HjKTNkG.jpg" alt="">
+                    <div class="status-indicator bg-warning"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Your work is awesome</div>
+                    <div class="small "> Stanley &middot; 12h</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image me-3">
+                    <img class="rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Thanks for your support</div>
+                    <div class="small ">grand misi &middot; 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small " href="#">Read all Messages</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <!--Logout setting-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" id="userDropdown" data-toggle="dropdown">
+                <span class="me-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://i.imgur.com/uIgDDDd.jpg">
+              </a>
+              <div class="dropdown-menu special " aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="my-profile.html">
+                  <i class="fa fa-user me-2 "></i>Profile
+                </a>
+                <a class="dropdown-item" href="change-password.html">
+                  <i class="fa fa-cogs me-2"></i>Forgot Password
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="login.html" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fa fa-sign-out me-2 "></i>Logout
+                </a>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        <div class="justify-content-between d-flex">
+          <!--Header Title Left-->
+          <div class="float-start">
+            <div class="page-header">
+              <div class="page-title">
+                <h3>List of admin</h3>
+                <span>all current admin details</span>
+              </div>
+            </div>
+          </div>
+          <!--Header Title Right-->
+          <div class="float-end">
+            <div class="page-header ">
+              <div class="page-title">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Staff List</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Alert Message-->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.         
+          <button type="button" class="btn-close close text-reset" data-bs-dismiss="alert" aria-label="Close"></button>
+          <button type="button" class="btn  text-reset" > Quick Start</button>
+        </div>
+        <!-----------------------------
+          Start You Code Here
+        ------------------------------>
+        
+        <section class="page-section mb-0" id="admin-list">
+            <div class="card">
+                <div class="card-header">  
+                  <div class="mb-2 mt-2 d-flex justify-content-between align-items-center">
+                    <div class="px-2">
+                      <a href="#" class="text-dark" data-bs-toggle="modal" data-bs-target="#"><i class="fa fa-solid fa-trash-can mt-1" style="font-size: 20px;"></i></a>
+                    </div>
+                    <div class="px-2">
+                      <span>Filters <i class="fa fa-angle-down"></i></span>
+                        
+                    </div>
+                    <div class="position-relative col-5">
+                      <div class="input-group rounded px-2">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <span class="input-group-text border-0" id="search-addon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="px-1">
+                        <a href="#" class="text-decoration-none text-dark me-2" data-bs-toggle="modal" data-bs-target="#addstaff">Add/Import</a>
+                        <a href="#" class="text-decoration-none text-dark ">Export</a>
+                    </div>  
+                  </div>
+                </div>
+              
+                <div class="card-body text-center">
+                  <div class="table-responsive" id="check01">
+                    <table class="table mb-0 ">
+                      <thead>
+                        <tr>
+                          <th>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="selectAll">
+                              <label for="selectAll"> </label>
+                            </span>
+                          </th>
+                         
+                          <th data-field="name">Employee 
+                            <div>
+                              <i class="fa-solid fa-arrow-down-a-z "></i>
+                              <i class="fa-solid fa-chevron-down " style="font-size:8px ;"></i>
+                              <i class="fa-solid fa-arrow-up-a-z "></i>
+                              <i class="fa-solid fa-chevron-down " style="font-size:8px ;"></i>
+                            </div>
+                          </th>
+                          <th data-field="price">Job Title <div> <i class="fa-solid fa-chevron-down" style="font-size:8px ;"></i></div></th>
+                          <th >Hire Date  <div> <i class="fa-solid fa-chevron-down " style="font-size:8px ;"></i></div></th>
+                          <th >Edit <div> <i class="fa-solid fa-chevron-down" style="font-size:8px ;"></i></div></th>
+                          <th >View <div> <i class="fa-solid fa-chevron-down" style="font-size:8px ;"></i></div></th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                        <tr>
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                              <label for="checkbox1"></label>
+                            </span>
+                          </td>
+                          <td>
+                            <div class="round-img">
+                                <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                               
+                            </div>
+                            Bonnie Liu
+                          </td>
+                          <td>Director</td>
+                          <td>01/02/2000</td>
+                          <td><a href="#" class="text-decoration-none">Edit</a></td>
+                          <td><a href="#" class="text-decoration-none">View</a></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                              <label for="checkbox2"></label>
+                            </span>
+                          </td>
+                          <td>
+                            <div class="round-img">
+                                <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                            </div>
+                            Bonnie Liu
+                          </td>
+                          <td>Director</td>
+                          <td>01/02/2000</td>
+                          <td><a href="#" class="text-decoration-none">Edit</a></td>
+                          <td><a href="detail-employee.html" class="text-decoration-none">View</a></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                              <label for="checkbox3"></label>
+                            </span>
+                          </td>
+                          <td>
+                            <div class="round-img">
+                                <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                            </div>
+                            April Yeo
+                          </td>
+                          <td>Director</td>
+                          <td>01/02/2000</td>
+                          <td><a href="#" class="text-decoration-none">Edit</a></td>
+                          <td><a href="detail-employee.html" class="text-decoration-none">View</a></td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                              <label for="checkbox4"></label>
+                            </span>
+                          </td>
+                          <td>
+                            <div class="round-img">
+                                <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                            </div>
+                            Aaron Goh 
+                          </td>
+                          <td>Director</td>
+                          <td>01/02/2000</td>
+                          <td><a href="#" class="text-decoration-none">Edit</a></td>
+                          <td><a href="detail-employee.html" class="text-decoration-none">View</a></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                              <label for="checkbox5"></label>
+                            </span>
+                          </td>
+                          <td>
+                            <div class="round-img">
+                                <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                            </div>
+                            Bonnie Liu
+                          </td>
+                          <td>Director</td>
+                          <td>01/02/2000</td>
+                          <td><a href="#" class="text-decoration-none">Edit</a></td>
+                          <td><a href="detail-employee.html" class="text-decoration-none">View</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </section>
+      </div> 
+    </div> 
+
+<!--  addstaff Modal -->
+<div class="modal fade" id="addstaff" tabindex="-1" aria-labelledby="addstaffModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <div class="modal-title" id="addstaffModalLabel">
+            <h5 >Basic Information </h5> 
+            <div>List here the basic information for this Staff</div>
+        </div>
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Email <span class="text-danger">**</span></label>
+                <input type="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>First Name <span class="text-danger">**</span></label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name <span class="text-danger">**</span></label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Job Title <span class="text-danger">**</span></label>
+                <input type="text" class="form-control" required>
+            </div>
+          
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Invitation Link
+                </label>
+            </div>
+        </div>
+        <div class="modal-footer">
+    
+        <button type="button" class="btn btn-success">Create</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#importstaff">Import Staff</button>
+       
+        </div>
+    </div>
+    </div>
+</div>
+<!---->
+ <!-- importstaff Modal -->
+ <div class="modal fade" id="importstaff" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="importstaffModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title" id="importstaffModalLabel">
+            <h5>Import Staff </h5>
+            <div class="col-10">Plaese download our template format at below,After fill in all the staff information and  Upload the file . Below are the section that you import</div>
+          </div>
+        
+          <button type="button" class="btn-close" onclick="location.href='admin-list.html'"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Template Download <span class="text-danger">**</span></label>
+            <input type="text" class="form-control" disabled>
+          </div>
+          <div class="form-group">
+            <label>Description <span class="text-danger">**</span></label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Invitation Link
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="admin-list.html" class="btn btn-secondary">  Close </a>
+          <button type="button" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+  </div>
+</div>
+<!---->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+      });
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+        // Activate tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+        
+        // Select/Deselect checkboxes
+        var checkbox = $('#check01 table tbody input[type="checkbox"]');
+        $("#selectAll").click(function(){
+          if(this.checked){
+            checkbox.each(function(){
+              this.checked = true;                        
+            });
+          } else{
+            checkbox.each(function(){
+              this.checked = false;                        
+            });
+          } 
+        });
+        checkbox.click(function(){
+          if(!this.checked){
+            $("#selectAll").prop("checked", false);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
