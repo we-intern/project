@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Check-in Info</title>
+    <title>Check-in Queue</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
     <section >
         <div class="container col-xl-4 col-md-6 pt-4"   >
             <div class="d-flex text-center align-items-center mb-4 pb-1">
-              <a href="checkin-member.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
+              <a href="check-in-info.html" class="text-decoration-none text-dark"><i class="fa-solid fa-angle-left px-4"></i></a>
               <i class="fa-solid fa-qrcode px-3 fa-3x ms-3"></i>
               <h4 class="text-center" > Check-in</h4>
             </div>
@@ -79,29 +79,33 @@
       </section>
       <section class="page-section text-white mb-0" id="">
         <div class="container col-xl-4 col-md-6 card bg-secondary pb-5 "   id="container">
-          <h4 class="text-center my-5">CHECK - IN  DETAILS</h4>     
+          <h4 class="text-center my-5">YOU ARE NOW IN QUEUE</h4>     
           <div class=" mx-3 py-4 col-xl-11 card">
               <div class=" text-center">
-                  <h5 class="mb-2">WELCOME , JACKSON </h5>
-                  <p>xxxxxx-xx-1009</p>
-                  <h6 class="mt-4">KLINIK ALAM MEDIC   </h6>
-                  <h6 class="px-5">NO 15, 
-                      Kampung Pinang Dalam,
-                      Klang, Selangor</h6>
+                  <h5 class="mb-2">Queue Number :</h5>
+                  <div class="card col-6 offset-3 py-3">
+                    <h4 class="mb-2">  A 0010 </h4>
+                    <p>25/07/2022 10:02am</p>
+                  </div>
+                </div>
+                <div class="col-8 offset-2"> 
+                  <h6 class="mt-4">2 Group Ahead of You</h6>
+                  <h5 class="mt-2">Estimated Time to 
+                    your turn</h5>
                   <div class="mt-3">
-                      <p>Date : 18 / 5 / 2022</p>
-                      <p>Time : 10:00 am</p>
+                    <h4 style="font-weight: 500;">15 Minutes</h4>
+                    <p class="small fst-italic mt-2">Awaiting approval from 
+                        our medical staff . 
+                        Please note that we will only hold 
+                        your space for 5 miniutes </p>
                   </div>
-                  <div class="col-md-12">
-                      <button class="mt-5 btn btn-danger button-01 rounded-pill" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">Booking Details </button>
-                  </div>
-                  <div class="col-md-12">
-                      <button class="mt-2 btn btn-primary button-01 rounded-pill" onclick="location.href='check-in-queue.html'">Check -in  </button>
-                  </div>
-                  
               </div>
+            <div class="col-md-12 text-center">
+                <button class="mt-5 btn btn-danger button-01 rounded-pill" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" id="bottom" aria-controls="offcanvasBottom">Cancel Queue </button>
+            </div>
+            <a href="check-in-success.html" class="text-center">Success</a>    
           </div> 
-          <div  class="  col-sm-12 col-xl-4 offcanvas offcanvas-bottom px-3" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
+          <div  class="col-sm-12 col-xl-4 offcanvas offcanvas-bottom px-3" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
               <div class="offcanvas-header text-center">
                 <div class="col-sm-12 col-md-10"></div>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -109,19 +113,15 @@
                 <div class="offcanvas-body" >
                   <div class="col-sm-12 col-md-12"> 
                     
-                    <h4 class="offcanvas-title " id="offcanvasBottomLabel" >Booking Details
+                    <h4 class="offcanvas-title " id="offcanvasBottomLabel" >Cancel Queue
                       <br</h4>
                     
                   </div> 
-                  <div class="mt-2">
-                      <p>Booking time : 10:15 am</p>
-                      <p>Booking date : 18 / 5 / 2022</p>
-                      <p>Clinic :
-                          KLINIK ALAM MEDIC   
-                          NO 15, 
-                          Kampung Pinang Dalam,
-                          Klang, Selangor </p>
+                  <div class="mt-4">
+                      <h5>Are you sure want to cancel the queue ?</h5>
+                     
                   </div>
+                  <button class="mt-5 btn btn-danger button-01 rounded-pill" type="button" onclick="location.href='check-in-info.html'">Cancel Queue </button>
                 </div>   
           </div>
         </div>
