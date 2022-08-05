@@ -61,7 +61,6 @@
             <!--collapse-->
             <li>
               <a href="clinic-profile.html"  class="nav-link"><i class="fa-solid fa-kit-medical px-2"></i> Clinic Profile</a>
-    
             </li>
             <li>
               <a href="admin-list.html"  class="nav-link "> <i class="fa-solid fa-users px-2"></i> Staff List</a>
@@ -89,9 +88,7 @@
                 <h6 class="dropdown-header">Alerts Center</h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="me-3">
-                    <div class="icon-circle">
-                      <i class="fa fa-file"></i>
-                    </div>
+                    <div class="icon-circle"><i class="fa fa-file"></i></div>
                   </div>
                   <div>
                     <div class="small ">March 12, 2020</div>
@@ -100,9 +97,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="me-3">
-                    <div class="icon-circle">
-                    <i class="fa fa-user"></i>
-                    </div>
+                    <div class="icon-circle"><i class="fa fa-user"></i></div>
                   </div>
                   <div>
                     <div class="small ">Feb 7, 2020</div>
@@ -111,9 +106,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="me-3">
-                    <div class="icon-circle">
-                    <i class="fa fa-download"></i>
-                    </div>
+                    <div class="icon-circle"><i class="fa fa-download"></i></div>
                   </div>
                   <div>
                     <div class="small ">Jan 2, 2020</div>
@@ -219,7 +212,7 @@
           </div>
         </div>
          <!--Alert Message-->
-         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
           <strong>Holy guacamole!</strong> You should check in on some of those fields below.         
           <button type="button" class="btn-close close text-reset" data-bs-dismiss="alert" aria-label="Close"></button>
           <button type="button" class="btn  text-reset" > Quick Start</button>
@@ -228,187 +221,185 @@
           Start You Code Here
         -------------------------------->
         <section class="page-section mb-0" id="patientbill">
-            <div class="container row">
-                <div class="billing-head my-2 ">
-                    <ul class="nav nav-tabs d-flex" id="myTab" role="tablist" style="border: none;">
-                        <li class="nav-item px-3" >
-                            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
-                          </li>
-                          <li class="nav-item px-3">
-                            <a class="nav-link" id="bill-tab" data-toggle="tab" href="#bill" role="tab" aria-controls="bill" aria-selected="false">Create Bill</a>
-                          </li>
-                          <li class="nav-item px-3">
-                            <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false">Edit / View Bill</a>
-                          </li>
-                    </ul>
-      
-                </div>
-                <div class="tab-content history-tab " id="myTabContent">
-                    <!--All Tab-->
-                    <div class="tab-pane fade show active " id="all" role="tabpanel" aria-labelledby="all-tab">   
-                        <div class="row px-xl-5">
-                           <!--1-->
-                            <div class="row col-md-9"> 
-                                <div class="row my-3 ">
-                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mt-4"> 
-                                <div class="row mt-2">
-                                    <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
-                                </div>
-                                <div class="row mt-2">
-                                    <button class="btn btn-primary" onclick="location.href='create-success.html'">Edit / View Bill</button>
-                                </div>
-                            </div>
-                            <!--2-->
-                            <div class="row col-md-9"> 
-                                <div class="row my-3 ">
-                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mt-4"> 
-                                <div class="row mt-2">
-                                  <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
-                                </div>
-                                <div class="row mt-2">
-                                  <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
-                                </div>
-                            </div>
-                            <!--3-->
-                            <div class="row col-md-9"> 
-                                <div class="row my-3 ">
-                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mt-4"> 
-                                <div class="row mt-2">
-                                  <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
-                                </div>
-                                <div class="row mt-2">
-                                  <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="my-5 text-center">
-                            <a href="#" class="fst-italic"> View More</a> 
-                        </div>
-                    </div>
-           
-                    <!--Bill Tab-->
-                    <div class="tab-pane fade " id="bill" role="tabpanel" aria-labelledby="bill-tab">   
-                        <div class="row px-xl-5">
-                            <!--1-->
-                            <div class="row col-md-9"> 
-                                <div class="row my-3 ">
-                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mt-4"> 
-                                <div class="row mt-2">
-                                  <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
-                                </div>
-                                <div class="row mt-2">
-                                  <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
-                                </div>
-                            </div>
-                            <!--2-->
-                            <div class="row col-md-9"> 
-                                <div class="row my-3 ">
-                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                    </div>
-                                </div>
-                                <div class="row mb-3 ">
-                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mt-4"> 
-                                <div class="row mt-2">
-                                  <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
-                                </div>
-                                <div class="row mt-2">
-                                  <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="my-5 text-center">
-                            <a href="#" class="fst-italic"> View More</a> 
-                        </div>
-                    </div>
-                    </div>
-                </div>
+          <div class="container row">
+            <div class="billing-head my-2 ">
+              <ul class="nav nav-tabs d-flex" id="myTab" role="tablist" style="border: none;">
+                <li class="nav-item px-3" >
+                  <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" id="bill-tab" data-toggle="tab" href="#bill" role="tab" aria-controls="bill" aria-selected="false">Create Bill</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false">Edit / View Bill</a>
+                </li>
+              </ul>
             </div>
+            <div class="tab-content history-tab " id="myTabContent">
+              <!--All Tab-->
+              <div class="tab-pane fade show active " id="all" role="tabpanel" aria-labelledby="all-tab">   
+                <div class="row px-xl-5">
+                  <!--1-->
+                  <div class="row col-md-9"> 
+                    <div class="row my-3 ">
+                      <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mt-4"> 
+                    <div class="row mt-2">
+                      <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
+                    </div>
+                    <div class="row mt-2">
+                      <button class="btn btn-primary" onclick="location.href='create-success.html'">Edit / View Bill</button>
+                    </div>
+                  </div>
+                  <!--2-->
+                  <div class="row col-md-9"> 
+                    <div class="row my-3 ">
+                      <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mt-4"> 
+                    <div class="row mt-2">
+                      <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
+                    </div>
+                    <div class="row mt-2">
+                      <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
+                    </div>
+                  </div>
+                  <!--3-->
+                  <div class="row col-md-9"> 
+                    <div class="row my-3 ">
+                      <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mt-4"> 
+                    <div class="row mt-2">
+                      <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
+                    </div>
+                    <div class="row mt-2">
+                      <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
+                    </div>
+                  </div>
+                </div> 
+                <div class="my-5 text-center">
+                  <a href="#" class="fst-italic"> View More</a> 
+                </div>
+              </div>
+      
+              <!--Bill Tab-->
+              <div class="tab-pane fade " id="bill" role="tabpanel" aria-labelledby="bill-tab">   
+                <div class="row px-xl-5">
+                  <!--1-->
+                  <div class="row col-md-9"> 
+                    <div class="row my-3 ">
+                      <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mt-4"> 
+                    <div class="row mt-2">
+                      <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
+                    </div>
+                    <div class="row mt-2">
+                      <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
+                    </div>
+                  </div>
+                  <!--2-->
+                  <div class="row col-md-9"> 
+                    <div class="row my-3 ">
+                      <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                      </div>
+                    </div>
+                    <div class="row mb-3 ">
+                      <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mt-4"> 
+                    <div class="row mt-2">
+                      <a class="btn btn-secondary" target="_blank" href="view.html" >View detail</a>
+                    </div>
+                    <div class="row mt-2">
+                      <button class="btn btn-success" onclick="location.href='create-bill.html'">Create Bill</button>
+                    </div>
+                  </div>
+                </div> 
+                <div class="my-5 text-center">
+                  <a href="#" class="fst-italic"> View More</a> 
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div> 
     </div> 

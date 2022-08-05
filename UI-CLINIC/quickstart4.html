@@ -24,14 +24,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
     <style>
-    /*icon-back
+
     .icon-background{
-    color: #714288;
+    color: #125040;
     }
+    /*
     .button-1{
       background-color: #714288;
       border: none;
     }*/
+    .profile-pic-wrapper {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .pic-holder {
+      text-align: center;
+      position: relative;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .pic-holder .pic {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+
+    .pic-holder .upload-file-block,
+    .pic-holder .upload-loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(90, 92, 105, 0.7);
+      color: #f8f9fc;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .pic-holder .upload-file-block {
+      cursor: pointer;
+    }
+
+    .pic-holder:hover .upload-file-block,
+    .uploadProfileInput:focus ~ .upload-file-block {
+      opacity: 1;
+    }
+
+    .pic-holder.uploadInProgress .upload-file-block {
+      display: none;
+    }
+
+    .pic-holder.uploadInProgress .upload-loader {
+      opacity: 1;
+    }
     </style>
   </head>
   <body > 
@@ -48,7 +111,7 @@
             <li class="label mb-2">YOU</li>
             <li><a href="dashboard.html" class="nav-link"> <i class="fa-solid fa-house-chimney px-2"></i> Dashboard </a></li>
             <li>
-              <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-clipboard-user px-2"></i> Patient <i class="fa-solid fa-angle-down small px-2"></i></a>
+              <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-clipboard-user px-2"></i> Patient<i class="fa-solid fa-angle-down small px-2"></i></a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li><a href="patient.html" class="nav-link px-4"><i class="fa-solid fa-clipboard-user px-1"></i> Patient </a></li>
                 <li><a href="patient-waitinglist.html" class="nav-link px-4"> <i class="fa-solid fa-right-to-bracket px-1"></i> Check In List </a></li>
@@ -69,7 +132,7 @@
             <!--./collapse-->
           </ul>
         </nav>
-      </div>  
+      </div>    
 
       <!-- Page Content  -->
       <div id="content" class="col" >   
@@ -224,28 +287,140 @@
           <button type="button" class="btn  text-reset" > Quick Start</button>
         </div>
         <!-----------------------------
-          Start You Code Here
+          Start You Code Here 
         ------------------------------>
         
-        <section class="page-section mb-0" id="quickstart4">
+        <section class="page-section mb-0" id="quickstart3">
             <div class="container" >
                 <div class="row card my-5">
                   <div class=" fade show " role="">
-                    <button type="button" class="float-end btn close text-reset" onclick="location.href='dashboard.html'">Skip</button>
+                    <button type="button" class="float-end btn close text-reset" onclick="location.href='quickstart5.html'">Skip</button>
                     <div class="text-center my-5">
-                      <h3><b>Congratulation you have completed all start up setting !</b></h3> 
-                      <span>Let start your journey now !</span>
+                      <h3><b>Step 3 :  Update Your Own Profile</b></h3> 
+                      <div class="col-md-4 offset-lg-4 mt-5">
+                        <div class="mb-2 mt-2 d-flex justify-content-center align-items-center">
+                          <div class="px-2 me-5">
+                            <i class="fa-solid fa-landmark fa-3x icon-background "></i>
+                          </div>
+                          <div class="px-2 me-5">
+                              My Profile
+                          </div>
+                          <div class="px-2">
+                            <a href="#" class="fa-stack fa-1x " data-bs-toggle="modal" data-bs-target="#company">
+                                <i class="fa fa-circle fa-stack-2x icon-background" aria-hidden="true"></i>
+                                <i class="fa fa-solid fa-plus fa-stack-1x text-white" aria-hidden="true"></i>
+                              </a>
+                        </div>
+                        </div>
+                      </div>
                     </div>
+                  
                     <div class="text-center mb-5">
-                      <button type="button" class="btn btn-danger" onclick="location.href='dashboard.html'"> GO</button>
+                      <button type="button" class="btn  btn-green" onclick="location.href='quickstart5.html'"> Next</button>
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
         </section>
       </div> 
     </div> 
 
+<!---->
+<!--  company Modal -->
+<div class="modal fade" id="company" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <div class="modal-title" id="companyModalLabel">
+            <h5 >My Profile</h5> 
+            <div>Complete the basic information for your Profile</div>
+        </div>
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="profile-pic-wrapper">
+                <div class="pic-holder">
+                  <!-- uploaded pic shown here -->
+                  <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?medical">
+              
+                  <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*"  />
+                  <label for="newProfilePhoto" class="upload-file-block">
+                    <div class="text-center">
+                      <div class="mb-2">
+                        <i class="fa fa-camera fa-2x"></i>
+                      </div>
+                      <div class="text-uppercase">
+                        <h6>Update <br /> Profile Photo</h6>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+              </div>   
+            <div class="form-group">
+                <label>Email <span class="text-danger">**</span></label>
+                <input type="email" class="form-control" placeholder="xxx@aa.co" >
+            </div>
+            <div class="form-group">
+                <label>First Name<span class="text-danger">**</span></label>
+                <input type="text" class="form-control" placeholder="aa" >
+            </div>
+            <div class="form-group">
+              <label>Last Name<span class="text-danger">**</span></label>
+              <input type="text" class="form-control" placeholder="xx" >
+          </div>
+            <div class="form-group">
+                <label>Phone<span class="text-danger">**</span></label>
+                <input type="number" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Address line 1<span class="text-danger">**</span></label>
+                <input type="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Address line 2<span class="text-danger">**</span></label>
+              <input type="address" class="form-control" required>
+            </div>
+            <div class="row">
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>Postcode<span class="text-danger">**</span></label>
+                  <input type="address" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>City<span class="text-danger">**</span></label>
+                  <input type="address" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>Country<span class="text-danger">**</span></label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>State <span class="text-danger">**</span></label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>       
+        </div>
+    </div>
+    </div>
+</div>
+<!---->
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -261,6 +436,71 @@
       });
     });
     </script>
+     <script>
+        $(document).on("change", ".uploadProfileInput", function () {
+  var triggerInput = this;
+  var currentImg = $(this).closest(".pic-holder").find(".pic").attr("src");
+  var holder = $(this).closest(".pic-holder");
+  var wrapper = $(this).closest(".profile-pic-wrapper");
+  $(wrapper).find('[role="alert"]').remove();
+  triggerInput.blur();
+  var files = !!this.files ? this.files : [];
+  if (!files.length || !window.FileReader) {
+    return;
+  }
+  if (/^image/.test(files[0].type)) {
+    // only image file
+    var reader = new FileReader(); // instance of the FileReader
+    reader.readAsDataURL(files[0]); // read the local file
+
+    reader.onloadend = function () {
+      $(holder).addClass("uploadInProgress");
+      $(holder).find(".pic").attr("src", this.result);
+      $(holder).append(
+        '<div class="upload-loader"><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
+      );
+
+      // Dummy timeout; call API or AJAX below
+      setTimeout(() => {
+        $(holder).removeClass("uploadInProgress");
+        $(holder).find(".upload-loader").remove();
+        // If upload successful
+        if (Math.random() < 0.9) {
+          $(wrapper).append(
+            '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>'
+          );
+
+          // Clear input after upload
+          $(triggerInput).val("");
+
+          setTimeout(() => {
+            $(wrapper).find('[role="alert"]').remove();
+          }, 3000);
+        } else {
+          $(holder).find(".pic").attr("src", currentImg);
+          $(wrapper).append(
+            '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There is an error while uploading! Please try again later.</div>'
+          );
+
+          // Clear input after upload
+          $(triggerInput).val("");
+          setTimeout(() => {
+            $(wrapper).find('[role="alert"]').remove();
+          }, 3000);
+        }
+      }, 1500);
+    };
+  } else {
+    $(wrapper).append(
+      '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose the valid image.</div>'
+    );
+    setTimeout(() => {
+      $(wrapper).find('role="alert"').remove();
+    }, 3000);
+  }
+});
+
+     </script>
   </body>
 </html>
 

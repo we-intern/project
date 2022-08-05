@@ -3,7 +3,7 @@
    const data02 = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [{
-      label: 'Usage',
+      label: 'Looping tension',
       data: [65, 59, 80, 81, 26, 55, 40],
       fill: false,
       borderColor: 'rgb(75, 192, 192)',

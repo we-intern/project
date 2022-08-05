@@ -30,6 +30,10 @@
     .icon-background{
     color: #714288;
     }
+    .button-01{
+      background-color: #714288;
+      border: none;
+    }
     </style>
   </head>
   <body > 
@@ -52,7 +56,6 @@
             <!--collapse-->
             <li>
               <a href="company-profile.html"  class="nav-link "> <i class="fa-solid fa-landmark px-2 "></i> Company Profile</a>
-    
             </li>
             <li>
               <a href="#pageSubmenu" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-wrench px-2"></i> Employee <i class="fa-solid fa-angle-down small px-2"></i></a>
@@ -68,12 +71,12 @@
               </ul>
             </li>
             <li>
-                <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support <i class="fa-solid fa-angle-down small px-2"></i></a>
-                <ul class="collapse list-unstyled" id="pageSubmenu03">
-                  <li><a href="current-plan.html" class="nav-link  px-5"> </i> Plan Reference</a></li>
-                  <li><a href="addon.html" class="nav-link px-5"> </i>Custom Feature</a></li>
-                </ul>
-              </li>
+              <a href="#pageSubmenu03" data-toggle="collapse" class="nav-link dropdown-toggle"><i class="fa-solid fa-gears px-2"></i> Support <i class="fa-solid fa-angle-down small px-2"></i></a>
+              <ul class="collapse list-unstyled" id="pageSubmenu03">
+                <li><a href="current-plan.html" class="nav-link  px-5"> </i> Plan Reference</a></li>
+                <li><a href="addon.html" class="nav-link px-5"> </i>Custom Feature</a></li>
+              </ul>
+            </li>
             <!--./collapse-->
           </ul>
         </nav>
@@ -204,7 +207,6 @@
         </ul>  
       </nav>
       <!--./Topbar--> 
-
         <div class="justify-content-between d-flex">
           <!--Header Title Left-->
           <div class="float-start">
@@ -221,7 +223,8 @@
               <div class="page-title">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-                  <li class="breadcrumb-item active">Member Detail / Holder</li>
+                  <li class="breadcrumb-item"><a href="benefits.html">Overview </a></li>
+                  <li class="breadcrumb-item active">Plan Member List / Holder</li>
                 </ol>
               </div>
             </div>
@@ -237,193 +240,179 @@
           Start You Code Here
         ------------------------------>
         <div class="container" >
-            <form>
+          <form>
             <div class="row mt-5 ">   
-
-                <span>** Assign aligible policy plan to employee based on your dicision</span>     
-                <div class="col-md-5 px-5 mt-5">
-                    <div class="holder-header text-center">
-                        <h5> <b>Employee</b></h5>
-                        <h6>Qualification for this employee</h6>
-                    </div>
-                </div>  
-                <div class="col-md-6 px-3"> 
-                    <div class="table-title mt-4">
-                        <div class="row text-center">
-                            <div class=" justify-content-center d-flex" >
-                                <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                                <h6 class="fa-stack-1x text-white">MART</h6>                           
-                                </span>     
-                                <h5 class="px-3 mt-3"> <b>April Yeo</b></h5>
-                                <div class="mt-3">                   
-                                    <a  href="#" class="fa-stack fa-1x">
-                                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                                      <i class="fa fa-solid fa-trash-can fa-stack-1x text-white" ></i>
-                                    </a>
-                                    <a  href="#addmember" data-toggle="modal" class="addmember fa-stack fa-1x">
-                                      <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                                      <i class="fa fa-solid fa-plus fa-stack-1x text-white" ></i>
-                                    </a>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="holder-body px-3 pt-4 pb-4 ">           
-                        <div class="form-group mb-2">
-                            <label for="exampleEmail">Email </label>
-                            <input type="text" class="form-control mt-1" id="exampleEmail" placeholder="Email">
-                        </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleDate">Hide Date</label>
-                            <input type="date" class="form-control mt-1" id="exampleDate" placeholder="">
-                        </div>
-                        <div class="form-group mb-2">
-                            <label for="exampleJob">Job Title</label>
-                            <input type="text" class="form-control mt-1" id="exampleJob" placeholder="Job Title"/>
-                        </div> 
-                        <div class="form-group mb-2">
-                            <label for="exampleDepartment">Department</label>
-                            <input type="text" class="form-control mt-1" id="exampleDepartment" placeholder="exampleDepartment"/>
-                        </div> 
-                    </div>
-                </div>  
+              <span>** Assign aligible policy plan to employee based on your dicision</span>     
+              <div class="col-md-5 px-5 mt-5">
+                <div class="holder-header text-center">
+                  <h5> <b>Employee</b></h5>
+                  <h6>Qualification for this employee</h6>
+                </div>
+              </div>  
+              <div class="col-md-6 px-3"> 
+                  <div class="table-title mt-4">
+                      <div class="row text-center">
+                          <div class=" justify-content-center d-flex" >
+                              <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                              <h6 class="fa-stack-1x text-white">MART</h6>                           
+                              </span>     
+                              <h5 class="px-3 mt-3"> <b>April Yeo</b></h5>
+                              <div class="mt-3">                   
+                                  <a  href="#" class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                                    <i class="fa fa-solid fa-trash-can fa-stack-1x text-white" ></i>
+                                  </a>
+                                  <a  href="#addmember" data-toggle="modal" class="addmember fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                                    <i class="fa fa-solid fa-plus fa-stack-1x text-white" ></i>
+                                  </a>
+                              </div>
+                          </div> 
+                      </div>
+                  </div>
+                  <div class="holder-body px-3 pt-4 pb-4 ">           
+                      <div class="form-group mb-2">
+                          <label for="exampleEmail">Email </label>
+                          <input type="text" class="form-control mt-1" id="exampleEmail" placeholder="Email">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="exampleDate">Hide Date</label>
+                          <input type="date" class="form-control mt-1" id="exampleDate" placeholder="">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="exampleJob">Job Title</label>
+                          <input type="text" class="form-control mt-1" id="exampleJob" placeholder="Job Title"/>
+                      </div> 
+                      <div class="form-group mb-2">
+                          <label for="exampleDepartment">Department</label>
+                          <input type="text" class="form-control mt-1" id="exampleDepartment" placeholder="exampleDepartment"/>
+                      </div> 
+                  </div>
+              </div>  
             </div>
             
             <div class="row">          
                 <div class="col-md-5 px-5 mt-5">
-                    <div class="holder-header ">
-                        <div class="text-center">
-                            <h5><b>Policy Plan</b></h5>
-                            <h6>Choose a better policy plan for this employee</h6>
-                        </div>
-                        
-                        <div class="px-5 mt-4">
-                            ** No policy 
-                            <li>employee less than 2 year</li>
-                            <li>intern</li>
-                            <li>part time</li>
-                        </div>
+                  <div class="holder-header ">
+                    <div class="text-center">
+                      <h5><b>Policy Plan</b></h5>
+                      <h6>Choose a better policy plan for this employee</h6>
                     </div>
+                    
+                    <div class="px-5 mt-4">
+                      ** No policy 
+                      <li>employee less than 2 year</li>
+                      <li>intern</li>
+                      <li>part time</li>
+                    </div>
+                  </div>
                 </div>  
                 <div class="col-md-6 px-3 mt-5"> 
-
-                    <div class="holder-body px-5 pt-4  pb-4 card ">  
-                        <label class="mb-3">Option Founded</label>         
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Basic Policy
-                            </label>
-                          </div>
-                          <div class="form-check mb-3">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Premium Policy
-                            </label>
-                          </div>
-                          <div class="form-check mb-3">
-                            
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                No Policy 
-                            </label>
-                            <div class="input-group mt-3">
-                                <span class="input-group-text">Reason :</span>
-                                <input type="text" class="form-control"></input>
-                            </div>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                              Email Notification
-                            </label>
-                          </div>
+                  <div class="holder-body px-5 pt-4  pb-4 card ">  
+                    <label class="mb-3">Option Founded</label>         
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">Basic Policy</label>
                     </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">Premium Policy</label>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">No Policy </label>
+                      <div class="input-group mt-3">
+                        <span class="input-group-text">Reason :</span>
+                        <input type="text" class="form-control"></input>
+                      </div>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">Email Notification</label>
+                    </div>
+                  </div>
                 </div>  
             </div>
-            <div class="row mt-5 ">          
+            <div class="row mt-5">          
                 <div class="col-md-5 px-5 mt-5">
-                    <div class="holder-header">
-                        <div class=" text-center">
-                            <h5><b>Dependents</b></h5>
-                            <h6>Add dependents for this employee</h6>
-                        </div>
-                        <div class="px-4 mt-4">
-                            **  Dependents policy 
-                            <li>Up to 4 person excluding Proposer</li>
-                            <li>Min RM 500.00 </li>
-                            <li>Max RM 2,000.00</li>
-                        </div>
+                  <div class="holder-header">
+                    <div class="text-center">
+                      <h5><b>Dependents</b></h5>
+                      <h6>Add dependents for this employee</h6>
                     </div>
+                    <div class="px-4 mt-4">
+                      **  Dependents policy 
+                      <li>Up to 4 person excluding Proposer</li>
+                      <li>Min RM 500.00 </li>
+                      <li>Max RM 2,000.00</li>
+                    </div>
+                  </div>
                 </div>  
                 <div class="col-md-6 px-3"> 
-                    <div class="holder-body px-2 pt-4 pb-4 ">           
-                        <div class="form-group mb-2">
-                            <label>Dependents identity</label>
-                            <select class="form-select mt-1" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                        </div>
-                        <div class="form-group mb-2">
-                            <label>Policy Limit</label>
-                            <select class="form-select mt-1" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                        </div>
-                        <div class="limit-body">
-                            <label>Limit Annually </label>
-                            <h6>Set Your Dependent Limit</h6>
-                            <div class="icon-body mt-3">
-                                <div class="col-md-8 mx-2">
-                                    <i class="fa-solid fa-user-doctor float-start mt-3" style="font-size:30px ;"></i>
-                                    <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
-                                        <span class="px-2">GP</span>
-                                        <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-body mt-3">
-                                <div class="col-md-8 mx-2">
-                                    <i class="fa-solid fa-stethoscope float-start mt-3" style="font-size:30px ;"></i>
-                                    <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
-                                        <span class="px-2">GP</span>
-                                        <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-body mt-3">
-                                <div class="col-md-8 mx-2">
-                                    <i class="fa-solid fa-tooth float-start mt-3" style="font-size:30px ;"></i>
-                                    <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
-                                        <span class="px-2">GP</span>
-                                        <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8 text-center mt-2">
-                                <a  href="#addmember"  class="addmember fa-stack fa-1x">
-                                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                                    <i class="fa fa-solid fa-plus fa-stack-1x text-white" ></i>
-                                  </a>
-                            </div>
-                        </div>
-                        
+                  <div class="holder-body px-2 pt-4 pb-4 ">           
+                    <div class="form-group mb-2">
+                      <label>Dependents identity</label>
+                      <select class="form-select mt-1" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
                     </div>
+                    <div class="form-group mb-2">
+                      <label>Policy Limit</label>
+                      <select class="form-select mt-1" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="limit-body">
+                      <label>Limit Annually </label>
+                      <h6>Set Your Dependent Limit</h6>
+                      <div class="icon-body mt-3">
+                        <div class="col-md-8 mx-2">
+                          <i class="fa-solid fa-user-doctor float-start mt-3" style="font-size:30px ;"></i>
+                          <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
+                            <span class="px-2">GP</span>
+                            <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="icon-body mt-3">
+                        <div class="col-md-8 mx-2">
+                          <i class="fa-solid fa-stethoscope float-start mt-3" style="font-size:30px ;"></i>
+                          <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
+                            <span class="px-2">GP</span>
+                            <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="icon-body mt-3">
+                        <div class="col-md-8 mx-2">
+                          <i class="fa-solid fa-tooth float-start mt-3" style="font-size:30px ;"></i>
+                          <div class="border border-secondary mx-5 pt-2 pb-2 px-2">
+                            <span class="px-2">GP</span>
+                            <input type="number" class="form-control" placeholder="RM 500.00" style="border:none"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8 text-center mt-2">
+                        <a  href="#addmember"  class="addmember fa-stack fa-1x">
+                          <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                          <i class="fa fa-solid fa-plus fa-stack-1x text-white" ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>  
             </div>
             <div class="text-center mb-5">
                 <button class="btn btn-primary button-01">Save</button>
             </div>
-        </form>
-    
+          </form>
         </div>
       </div> 
     </div> 

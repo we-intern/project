@@ -229,24 +229,22 @@
         ------------------------------>
         
         <section class="page-section mb-0" id="wait">
-            <div class="container row">
+            <div class="container">
                 <div class="waiting-head my-2 ">
-                    <ul class="nav nav-tabs d-flex" id="myTab" role="tablist" style="border: none;">
-                      <li class="nav-item px-3" >
-                        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" id="checkin-tab" data-toggle="tab" href="#checkin" role="tab" aria-controls="checkin" aria-selected="false">Check-In</a>
-                      </li>
-                      <li class="nav-item px-3">
-                        <a class="nav-link" id="checkout-tab" data-toggle="tab" href="#checkout" role="tab" aria-controls="checkout" aria-selected="false">Check-Out</a>
-                      </li>
-                      
-                    </ul>
-      
+                  <ul class="nav nav-tabs d-flex" id="myTab" role="tablist" style="border: none;">
+                    <li class="nav-item px-3" >
+                      <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                    </li>
+                    <li class="nav-item px-3">
+                      <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending</a>
+                    </li>
+                    <li class="nav-item px-3">
+                      <a class="nav-link" id="checkin-tab" data-toggle="tab" href="#checkin" role="tab" aria-controls="checkin" aria-selected="false">Check-In</a>
+                    </li>
+                    <li class="nav-item px-3">
+                      <a class="nav-link" id="checkout-tab" data-toggle="tab" href="#checkout" role="tab" aria-controls="checkout" aria-selected="false">Check-Out</a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="tab-content history-tab " id="myTabContent">
                     <!--All Tab-->
@@ -254,102 +252,101 @@
                         <div class="row">
                             <div class="row col-md-6"> 
                                 <table class="table table-striped">              
-                                    <tbody>
-                                    <tr>                 
-                                        <td class="px-5 pt-4">
-                                            <form >
-                                                <span class="border-dark rounded-pill bg-primary p-2">Pending </span>
-                                                <div class="mt-3">
-                                                  <span >Queue Number : A 0010</span>
+                                  <tbody>
+                                  <tr>                 
+                                    <td class="px-5 pt-4">
+                                      <form >
+                                          <span class="border-dark rounded-pill bg-primary p-2">Pending </span>
+                                          <div class="mt-3">
+                                            <span >Queue Number : A 0010</span>
+                                          </div>
+                                          <div class="row my-3 ">
+                                              <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                                              <div class="col-sm-6">
+                                                  <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="row mb-3 ">
+                                              <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                                              <div class="col-sm-6">
+                                                  <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="row mb-3 ">
+                                              <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                                              <div class="col-sm-6">
+                                                  <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="text-center">
+                                              <a href="patient-waiting-detail.html">View</a>
+                                          </div>
+                                      </form>
+                                    </td>                 
+                                  </tr>
+                                  <tr>                
+                                    <td class="px-5 pt-4">
+                                        <form>
+                                            <span class=" border-dark rounded-pill bg-primary p-2">Pending </span>
+                                            <div class="mt-3">
+                                              <span >Queue Number : A 0010</span>
+                                            </div>
+                                            <div class="row my-3 ">
+                                                <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
                                                 </div>
-                                                <div class="row my-3 ">
-                                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                                    </div>
+                                            </div>
+                                            <div class="row mb-3 ">
+                                                <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                                                <div class="col-sm-6">
+                                                    <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
                                                 </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                                    </div>
+                                            </div>
+                                            <div class="row mb-3 ">
+                                                <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                                                <div class="col-sm-6">
+                                                    <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
                                                 </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="patient-waiting-detail.html">View</a>
-                                                </div>
-                                            </form>
-                                        </td>                 
-                                    </tr>
-                                    <tr>                
-                                        <td class="px-5 pt-4">
-                                            <form>
-                                                <span class=" border-dark rounded-pill bg-primary p-2">Pending </span>
-                                                <div class="mt-3">
-                                                  <span >Queue Number : A 0010</span>
-                                                </div>
-                                                <div class="row my-3 ">
-                                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="patient-waiting-detail.html">View</a>
-                                                </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-5 pt-4">
-                                            <form>
-                                                <span class=" border-dark rounded-pill bg-success p-2">Check - In </span>
-                                                <div class="mt-3">
-                                                  <span >Queue Number : A 0010</span>
-                                                </div>
-                                                <div class="row my-3 ">
-                                                    <label for="inputName" class="col-sm-3 col-form-label">Name</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3 ">
-                                                    <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">View</a>
-                                                </div>
-                                            </form>
-                                        
-                                        </td> 
-                                    </tr>
-                                    </tbody>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="patient-waiting-detail.html">View</a>
+                                            </div>
+                                        </form>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="px-5 pt-4">
+                                      <form>
+                                          <span class=" border-dark rounded-pill bg-success p-2">Check - In </span>
+                                          <div class="mt-3">
+                                            <span >Queue Number : A 0010</span>
+                                          </div>
+                                          <div class="row my-3 ">
+                                              <label for="inputName" class="col-sm-3 col-form-label">Name</label>
+                                              <div class="col-sm-6">
+                                                  <input type="text" class="form-control" id="inputName" placeholder="Jacob" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="row mb-3 ">
+                                              <label for="inputMy" class="col-sm-3 col-form-label">My KAD</label>
+                                              <div class="col-sm-6">
+                                                  <input type="number" class="form-control" id="inputMy" placeholder="000000-10-0000" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="row mb-3 ">
+                                              <label for="inputTime" class="col-sm-3 col-form-label">Time</label>
+                                              <div class="col-sm-6">
+                                                  <input type="text" class="form-control" id="inputTime" placeholder="18/5/2022 12:51" readonly>
+                                              </div>
+                                          </div>
+                                          <div class="text-center">
+                                              <a href="#">View</a>
+                                          </div>
+                                      </form>
+                                    </td> 
+                                  </tr>
+                                  </tbody>
                                 </table>
                             </div>
 

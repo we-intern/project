@@ -1,0 +1,263 @@
+/* ---------------------------------------------------
+            Header Nav And Sidebar 
+----------------------------------------------------- */
+
+    body{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    }
+    
+    .nav-link{
+    margin-top: 5px;
+    }
+    .navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    #sidebar{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 550;  
+    }
+    /* ---------------------------------------------------
+             BUTTON
+    ----------------------------------------------------- */
+    .btn-gray{  
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #343C56 !important;
+        --bs-btn-border-color: #343C56 !important;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #343C56 !important;
+        --bs-btn-hover-border-color: #343C56 !important;
+        --bs-btn-focus-shadow-rgb: 225,83,97;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #343C56 !important;
+        --bs-btn-active-border-color: #343C56 !important;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #343C56 !important;
+        --bs-btn-disabled-border-color: #343C56 !important;
+        }
+    /* ---------------------------------------------------
+                SIDEBAR STYLE
+    ----------------------------------------------------- */
+    
+    .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    }
+    
+    #sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #343C56;
+    color: #fff;
+    transition: all 0.3s;
+    
+    }
+    
+    #sidebar.active {
+    margin-left: -250px;
+    }
+    
+    #sidebar .sidebar-header {
+    padding: 20px;
+    background: #343C56;
+    }
+    
+    #sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #343C56;
+    }
+    
+    #sidebar ul p {
+    color: #fff;
+    padding: 10px;
+    }
+    
+    #sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    }
+    
+    #sidebar ul li a:hover {
+    color: #C0C1C7 !important;
+    
+    }
+    
+    #sidebar ul li.active>a,#topbar
+    a[aria-expanded="true"] {
+    color: #fff;
+    background: #C0C1C7;
+    }
+    
+    #topbar a[data-toggle="collapse"] {
+    position: relative;
+    }
+    
+    .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    }
+    .dropdown-item.active, .dropdown-item:active {
+    background-color: #C0C1C7;
+    color: #343C56;
+    }
+    
+    
+    /* ---------------------------------------------------
+                CONTENT STYLE
+    ----------------------------------------------------- */
+    
+    #content {
+    width: 100%;
+    padding: 20px 20px 0px 35px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    }
+    
+    /* ---------------------------------------------------
+                //navigation bar//
+    ----------------------------------------------------- */
+    
+    
+    .topbar {
+    height: 4.375rem;
+    }
+    
+    .topbar .nav-item .nav-link {
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .75rem;
+    }
+    
+    
+    .topbar .nav-item .nav-link .badge-counter {
+    position: absolute;
+    transform: scale(.7);
+    transform-origin: top right;
+    right: .25rem;
+    margin-top: -.25rem;
+    }
+    
+    .topbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: #d1d3e2;
+    }
+    
+    .dropdown-toggle::after {
+    content:none !important;
+    }
+    
+    .badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .35rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    
+    .form-control:focus {
+    
+    box-shadow: none !important;
+    }
+    
+    .input-group-append button{
+    box-shadow: none !important;
+    }
+    
+    .topbar .nav-item .nav-link .badge-counter {
+    position: absolute;
+    transform: scale(.7);
+    transform-origin: top right;
+    right: .25rem;
+    margin-top: -.25rem;
+    }
+    
+    .badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .35rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    
+    .rounded-circle{
+    
+    width: 40px;
+    height: 40px;
+    }
+    
+    .topbar .topbar-divider {
+    width: 0;
+    border-right: 1px solid #C0C1C7;
+    height: calc(4.375rem - 2rem);
+    margin: auto 1rem;
+    }
+    
+    .topbar .dropdown-list {
+    width: 20rem!important;
+    }
+    
+    /*nav dropdown size*/
+    .notidrop{
+    top: 60px;
+    right: -120px;
+    left: unset;
+    
+    box-shadow: 0px 5px 5px -1px #C0C1C7;
+    padding-bottom: 0px;
+    padding: 0px;
+    }
+    .normaldrop{
+    right: -80px !important;
+    }
+    
+    .special{
+    width: 200px !important;
+    right: -10px !important;
+    
+    }
+    .filter-dropdown{
+        width: 300px !important;
+        right: -15px !important;
+    }
+    /* ---------------------------------------------------
+    MEDIAQUERIES
+    ----------------------------------------------------- */
+    
+    @media (max-width: 768px) {
+    #sidebar {
+    margin-left: -250px;
+    }
+    #sidebar.active {
+    margin-left: 0;
+    }
+    #sidebarCollapse span {
+    display: none;
+    }
+    }
+    /* ---------------------------------------------------
+    END Header Nav And Sidebar 
+    ----------------------------------------------------- */

@@ -282,7 +282,6 @@
                         <h4>Policy Holders <i class="fa-solid fa-folder-open px-5"></i></h4>
                         <p>List all the employee plan policy. You need assign a policy to them or upgrade it manual. 
                             All the employee name will be direct added in here when your add a new employee</p>
-                        
                     </div>
                 </div>  
             </div>
@@ -307,7 +306,7 @@
                             </div>
                             </div>
                             <div class="px-1">
-                                <a href="#" class="text-white fst-italic me-2">Export</a>
+                                <a href="#" class="text-white fst-italic me-2"  data-bs-toggle="modal" data-bs-target="#exportModal">Export</a>
                             </div>  
                         </div>
                     </div>
@@ -346,9 +345,9 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <div class="round-img">
-                                        <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
-                                    </div>
+                                  <div class="round-img">
+                                    <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                                </div>
                                     Bonnie Liu
                                 </td>
                                 <td>BP123809</td>
@@ -365,9 +364,9 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <div class="round-img">
-                                        <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
-                                    </div>
+                                  <div class="round-img">
+                                    <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                                  </div>
                                     Bonnie Liu
                                 </td>
                                 <td>BP123809 </td>
@@ -384,9 +383,9 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <div class="round-img">
-                                        <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
-                                    </div>
+                                  <div class="round-img">
+                                    <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                                  </div>
                                     April Yeo
                                 </td>
                                 <td>-</td>
@@ -404,9 +403,9 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <div class="round-img">
-                                        <a href=""><img width="35" src="./images/avatar/1.png" alt=""></a>
-                                    </div>
+                                  <div class="round-img">
+                                    <a href=""><img width="35" class="rounded-circle" src="https://source.unsplash.com/random/150x150?person" alt=""></a>
+                                  </div>
                                     Aaron Goh 
                                 </td>
                                 <td>-</td>
@@ -415,7 +414,6 @@
                                 <td>2017</td>
                                 <td><i class="fa-solid fa-angle-right"></i></td>
                                 </tr>
-                                
                             </tbody>
                             </table>
                         </div>
@@ -444,6 +442,25 @@
               <input type="submit" class="btn btn-danger" value="Delete">
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Export Modal -->
+    <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exportModalLabel">Export</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you want to export this table ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger button-1">Export</button>
+          </div>
         </div>
       </div>
     </div>

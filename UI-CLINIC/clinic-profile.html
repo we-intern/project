@@ -296,121 +296,104 @@
         ------------------------------>
         
         <section class="page-section mb-0" id="clinic-profile">
-            <div class="container">
-                <div class="text-center d-flex justify-content-center">
-                    <div class="profile-pic-wrapper">
-                        <div class="pic-holder">
-                            <!-- uploaded pic shown here -->
-                            <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?clinic">
-                        
-                            <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
-                            <label for="newProfilePhoto" class="upload-file-block">
-                            <div class="text-center">
-                                <div class="mb-2">
-                                <i class="fa fa-camera fa-2x"></i>
-                                </div>
-                                <div class="text-uppercase">
-                                Update <br /> Profile Photo
-                                </div>
-                            </div>
-                            </label>
-                        </div>
-
-                    </div>   
-
-                </div>
-        
-                <div class="mt-4 mx-3">
-                    <span class="rounded-pill bg-color p-2 text-white">Clinic Profile</span>
-                    <form class="mt-4">
-                          <!-- ID input -->
-                          <div class="form-outline mb-4">
-                            <label class="form-label" for="formID">Clinic ID </label>
-                          <input type="number" id="formID" class="form-control" placeholder="000000" disabled />
-                          
-                        </div>
-                        <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="row mb-4">
-                          <div class="col">
-                            <div class="form-outline">
-                                <label class="form-label" for="formName">Clinic Name</label>
-                              <input type="text" id="formName" class="form-control" />
-                              
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="form-outline">
-                                <label class="form-label" for="formPhone">Clinic Phone</label>
-                              <input type="number" id="formPhone" class="form-control" />
-                            </div>
-                          </div>
-                        </div>
-                      
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="form3Example3">Email address</label>
-                          <input type="email" id="form3Example3" class="form-control" />
-                          
-                        </div>
-                      
-                        <!-- Address line 1  input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="formAdd">Address line 1 </label>
-                            <input type="text" id="formAdd" class="form-control" />
-                       
-                        </div>
-                        <!-- Address line 2  input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="formAdd2">Address line 2</label>
-                            <input type="text" id="formAdd2" class="form-control" />
-                       
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <!-- Postcode  input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="formPost">Postcode</label>
-                                    <input type="number" id="formPost" class="form-control" />
-                            
-                                </div>
-                            </div>
-                            <div class="col">
-                                <!-- City   input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="formCity ">City </label>
-                                    <input type="text" id="formCity" class="form-control" />
-                            
-                                </div>
-                            </div>
-                            <div class="col">
-                                 <!-- State   input -->
-                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="formState ">State </label>
-                                    <input type="text" id="formState" class="form-control" />
-                            
-                                </div>
-                            </div>
-                            <div class="col">
-                                <!-- Country    input -->
-                                <div class="form-outline mb-4">
-                                    <label class="form-label" for="formCountry  ">Country  </label>
-                                    <input type="text" id="formCountry" class="form-control" />
-                            
-                                </div>
-                            </div>
-                                
-                        </div>
-                       
-                      
-                        <div class="text-center">
-                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
-                        </div>
-                      </form>
+          <div class="container">
+              <div class="text-center d-flex justify-content-center">
+                <div class="profile-pic-wrapper">
+                  <div class="pic-holder">
+                    <!-- uploaded pic shown here -->
+                    <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?clinic">
+                    <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+                    <label for="newProfilePhoto" class="upload-file-block">
+                    <div class="text-center">
+                      <div class="mb-2">
+                      <i class="fa fa-camera fa-2x"></i>
+                      </div>
+                      <div class="text-uppercase">
+                      Update <br /> Profile Photo
+                      </div>
+                    </div>
+                    </label>
+                  </div>
+                </div>   
+              </div>
+      
+              <div class="mt-4 mx-3">
+                <span class="rounded-pill bg-color p-2 text-white">Clinic Profile</span>
+                <form class="mt-4">
+                  <!-- ID input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="formID">Clinic ID </label>
+                    <input type="number" id="formID" class="form-control" placeholder="000000" disabled />
+                  </div>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-outline">
+                        <label class="form-label" for="formName">Clinic Name</label>
+                        <input type="text" id="formName" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-outline">
+                        <label class="form-label" for="formPhone">Clinic Phone</label>
+                        <input type="number" id="formPhone" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Email address</label>
+                    <input type="email" id="form3Example3" class="form-control" />
+                  </div>
                 
-                </div>
-
-            </div>
+                  <!-- Address line 1  input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="formAdd">Address line 1 </label>
+                    <input type="text" id="formAdd" class="form-control" />
+                  </div>
+                  <!-- Address line 2  input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="formAdd2">Address line 2</label>
+                    <input type="text" id="formAdd2" class="form-control" />
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <!-- Postcode  input -->
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="formPost">Postcode</label>
+                        <input type="number" id="formPost" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- City   input -->
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="formCity ">City </label>
+                        <input type="text" id="formCity" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- State   input -->
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="formState ">State </label>
+                        <input type="text" id="formState" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- Country    input -->
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="formCountry  ">Country  </label>
+                        <input type="text" id="formCountry" class="form-control" />
+                      </div>
+                    </div>
+                          
+                  </div>
+                  <div class="text-center">
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Save</button>
+                  </div>
+                </form>
+              </div>
+          </div>
         </section>
       </div> 
     </div> 

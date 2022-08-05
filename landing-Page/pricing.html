@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pricing</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Style -->
+    <link href="../css/lib/style-landing.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <style>
+    
+      @media (min-width: 992px) {
+        #mainNav {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          border: none;
+          background-color: transparent;
+          transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand {
+          font-size: 1.5em;
+          transition: font-size 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand img {
+          height: 2rem;
+          transition: height 0.3s ease-in-out;
+        }
+        #mainNav.navbar-shrink {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          background-color: #212529;
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+          font-size: 1.25em;
+        }
+        #mainNav.navbar-shrink .navbar-brand svg,
+      #mainNav.navbar-shrink .navbar-brand img {
+          height: 1.5rem;
+        }
+        #mainNav .navbar-nav .nav-item {
+          margin-right: 1rem;
+        }
+        #mainNav .navbar-nav .nav-item:last-child {
+          margin-right: 0;
+        }
+      }
+      header.masthead {
+        padding-top: 10rem;
+        padding-bottom: 6rem;
+        text-align: center;
+        background-image: url("./svg/bg.svg");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+      }
+     
+      /*Budget*/
+      #bg-budget{
+        background: #21323F;
+        border-radius: 20px;
+
+      }
+      #bg-cost{
+        background: #F3FAFD;
+        border-radius: 20px;
+      }
+      #bg-cost2{
+        background: #226596;
+        border-radius: 20px;
+      }
+      #second{
+        background: conic-gradient(from 172.4deg at 58.17% 52.21%, #C9E9F6 0deg, rgba(201, 233, 246, 0) 223.13deg, #C9E9F6 360deg);
+      }
+
+      .footer{
+        background: #226596 !important;
+      }
+  
+    </style>
+  </head>
+  <body> 
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Healthcare APP</a>
+            <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="solution.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="works.html">How it work</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partner.html">Partners</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link btn btn-blue rounded-pill px-5" href="#"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Book Demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">              
+                <div class="col-sm-12 col-md-12">                     
+                    <div class="row" id="pricing-search">
+                        <div class="text-center mt-2">
+                            <h2><b>Pricing</b></h2>
+                            <p class="lead fw-normal text-muted">Totally Free to Apply</p>
+                            <p class="lead fw-normal text-muted">Choose a plan that you Preferred </p>
+                            <p class="lead fw-normal text-muted">Manage employee benefits with Medical Cards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Plan-->
+    <section class="bg-white">
+      <div class="container" >
+        <div class="row items-collection">
+            <div class="col-md-12 table-responsive">
+                <table class="table table-borderless" width="50%">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="card" id="bg-cyan-blue">
+                                <div class="card-header text-center">
+                                    <div class=""><h3 class="my-4 p-4 text-white"><b>Better Features <br> in App</b></h3></div>
+                                </div>
+                                </div>
+                            </th>
+                            <th >
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <div class="my-2 p-2 card text-white" id="bg-cyan-blue">
+                                            <h5>Personal</h5>
+                                            <h6><b>FREE</b></h6>
+                                            <h6>For started</h6>
+                                            <h6 class="small">*Take a look for basic 
+                                                benefits employee 
+                                                & analysis</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th >
+                                <div class="card" id="bg-cyan-blue">
+                                    <div class="card-header text-center">
+                                        <div class="my-2 p-2 card">
+                                            <h5>Advanced</h5>
+                                            <h6><b>FREE</b></h6>
+                                            <h6>For advanced version</h6>
+                                            <h6 class="small">Advanced features ready to use</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th >
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <div class="my-2 p-2 card text-white" id="bg-cyan-blue">
+                                            <h5>VIP</h5>
+                                            <h6><b>FREE</b></h6>
+                                            <h6>For VIP version</h6>
+                                            <h6 class="small">More Controls & Benefits</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                         <!---Inpatient-->
+                        <tr>
+                            <th scope="row">
+                                <h6 class="border mx-4 p-2 text-white text-center" id="bg-cyan-blue" style="border-radius:20px;">Inpatient benefits</h6>
+                            </th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Hospital Admission</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Hospitalisation & surgical Insurance</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!---Outpatient-->
+                        <tr>
+                            <th scope="row">
+                                <h6 class="border mx-4 p-2 text-white text-center" id="bg-cyan-blue" style="border-radius:20px;">Outpatient benefits</h6>
+                            </th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Dental</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">GP (General Practitioner)</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Optical</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Specialist</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Traditional Chinese Medicine & Treatment</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <!---Other Services-->
+                        <tr>
+                            <th scope="row">
+                                <h6 class="border mx-4 p-2 text-white text-center" id="bg-cyan-blue" style="border-radius:20px;">Other Services</h6>
+                            </th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Medical Claim Submission</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Refundable Funds</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white "></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Copayment</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Guarantee Letter</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><p class="mx-4">Dependent</p></th>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x grey-text"></i>
+                                        <i class="fa-solid fa-xmark fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-center">
+                                    <span class="fa-stack fa-1x">
+                                        <i class="fa-solid fa-circle fa-stack-2x cyan-blue-text"></i>
+                                        <i class="fa-solid fa-check fa-stack-1x text-white"></i>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>   
+      </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer class="footer py-5 text-white" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md pr-md-5 mb-4 mb-md-0">
+            <h3><b>LOGO</b></h3>
+            <div class="col-8">
+              <p class="lead text-white-50">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <ul class="nav ">
+                <li class="nav-item"><a class="nav-link btn btn-secondary text-white" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a></li>
+                <li class="nav-item"><a class="nav-link btn text-white" href="contact.html">Book Demo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h4>Services</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="solution.html" class="nav-link p-0 text-white">Solutions</a></li>
+                <li class="nav-item mb-2"><a href="works.html" class="nav-link p-0 text-white">How it work</a></li>
+                <li class="nav-item mb-2 active"><a href="pricing.html" class="nav-link p-0 text-white">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">Company</a></li>
+                <li class="nav-item mb-2"><a href="partner.html" class="nav-link p-0 text-white">Partner</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h3>Office</h3>
+            <p class="lead text-white-50">23, jkajlkalsd, atjsnkmc , Klanshs, Malaysia</p>
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>              
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="m-2 ms-auto">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <h2><b>Health Care App</b></h2>
+              <p class="text-muted">Partners Portal Login</p>
+              <p class="text-muted">Choose Your sign-in option</p>
+              <div class="row">
+                <div class="col-md-4 mt-lg-4 mt-2">
+                  <a href="../UI-EMPLOYEE/login.html" class="text-decoration-none">
+                    <div class="card shadow p-4" id="card-size2">
+                      <div class="text-center">
+                        <h5>Employee Portal Login </h5>
+                        <p class="text-muted">For Employees & dependants</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 mt-lg-4 mt-2">
+                  <a href="../UI-HR/login.html" class="text-decoration-none">
+                  <div class="card shadow p-4" id="card-size2">
+                    <div class="text-center">
+                      <h5>HR Portal Login </h5>
+                      <p class="text-muted">For HR admininstration</p>
+                    </div>
+                  </div>   
+                  </a>             
+                </div>
+                <div class="col-md-4 mt-lg-4 mt-2">
+                  <a href="../UI-CLINIC/login.html" class="text-decoration-none">
+                    <div class="card shadow p-4" id="card-size2">
+                      <div class="text-center">
+                        <h5>Providers Portal Login </h5>
+                        <p class="text-muted">For Our Panel providers</p>
+                      </div>                        
+                    </div>  
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center m-2">
+              <button type="button" class="btn" data-bs-dismiss="modal">Back to Previous Page</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="js/scripts.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/ecf1f9cdd0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>
+

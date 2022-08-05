@@ -24,77 +24,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
     <style>
-    /*icon-back
+
     .icon-background{
-    color: #714288;
+    color: #125040;
     }
+    /*
     .button-1{
       background-color: #714288;
       border: none;
     }*/
     .profile-pic-wrapper {
   
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.pic-holder {
-  text-align: center;
-  position: relative;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .pic-holder {
+      text-align: center;
+      position: relative;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-.pic-holder .pic {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
+    .pic-holder .pic {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
 
-.pic-holder .upload-file-block,
-.pic-holder .upload-loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(90, 92, 105, 0.7);
-  color: #f8f9fc;
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
+    .pic-holder .upload-file-block,
+    .pic-holder .upload-loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(90, 92, 105, 0.7);
+      color: #f8f9fc;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
 
-.pic-holder .upload-file-block {
-  cursor: pointer;
-}
+    .pic-holder .upload-file-block {
+      cursor: pointer;
+    }
 
-.pic-holder:hover .upload-file-block,
-.uploadProfileInput:focus ~ .upload-file-block {
-  opacity: 1;
-}
+    .pic-holder:hover .upload-file-block,
+    .uploadProfileInput:focus ~ .upload-file-block {
+      opacity: 1;
+    }
 
-.pic-holder.uploadInProgress .upload-file-block {
-  display: none;
-}
+    .pic-holder.uploadInProgress .upload-file-block {
+      display: none;
+    }
 
-.pic-holder.uploadInProgress .upload-loader {
-  opacity: 1;
-}
+    .pic-holder.uploadInProgress .upload-loader {
+      opacity: 1;
+    }
     </style>
   </head>
   <body > 
@@ -296,17 +297,17 @@
                   <div class=" fade show " role="">
                     <button type="button" class="float-end btn close text-reset" onclick="location.href='quickstart4.html'">Skip</button>
                     <div class="text-center my-5">
-                      <h3><b>Step 3 :  Update Your Company Profile</b></h3> 
+                      <h3><b>Step 2 :  Update Your Clinic Profile</b></h3> 
                       <div class="col-md-4 offset-lg-4 mt-5">
                         <div class="mb-2 mt-2 d-flex justify-content-center align-items-center">
                           <div class="px-2 me-5">
                             <i class="fa-solid fa-landmark fa-3x icon-background "></i>
                           </div>
                           <div class="px-2 me-5">
-                              Company
+                              Clinic
                           </div>
                           <div class="px-2">
-                            <a href="#" class="fa-stack fa-1x " data-bs-toggle="modal" data-bs-target="#company">
+                            <a href="#" class="fa-stack fa-1x " data-bs-toggle="modal" data-bs-target="#clinicpro">
                                 <i class="fa fa-circle fa-stack-2x icon-background" aria-hidden="true"></i>
                                 <i class="fa fa-solid fa-plus fa-stack-1x text-white" aria-hidden="true"></i>
                               </a>
@@ -316,7 +317,7 @@
                     </div>
                   
                     <div class="text-center mb-5">
-                      <button type="button" class="btn  btn-danger" onclick="location.href='quickstart4.html'"> Next</button>
+                      <button type="button" class="btn  btn-green" onclick="location.href='quickstart4.html'"> Next</button>
                     </div>
                   </div>
                 </div>
@@ -326,12 +327,12 @@
     </div> 
 
 <!---->
-<!--  company Modal -->
-<div class="modal fade" id="company" tabindex="-1" aria-labelledby="companyModalLabel" aria-hidden="true">
+<!--  Clinic Modal -->
+<div class="modal fade" id="clinicpro" tabindex="-1" aria-labelledby="clinicproModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-        <div class="modal-title" id="companyModalLabel">
+        <div class="modal-title" id="clinicproModalLabel">
             <h5 >Clinic Profile</h5> 
             <div>List here the basic information for clinic</div>
         </div>
@@ -342,7 +343,7 @@
             <div class="profile-pic-wrapper">
                 <div class="pic-holder">
                   <!-- uploaded pic shown here -->
-                  <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?person">
+                  <img id="profilePic" class="pic" src="https://source.unsplash.com/random/150x150?medical">
               
                   <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*"  />
                   <label for="newProfilePhoto" class="upload-file-block">
@@ -363,22 +364,54 @@
                 <input type="email" class="form-control" placeholder="xxx@aa.co" disabled>
             </div>
             <div class="form-group">
-                <label>Company Name<span class="text-danger">**</span></label>
+                <label>Clinic Name<span class="text-danger">**</span></label>
                 <input type="text" class="form-control" placeholder="XXXX SDN BHD" disabled>
             </div>
             <div class="form-group">
-                <label>Company Registration No. <span class="text-danger">**</span></label>
+                <label>Phone<span class="text-danger">**</span></label>
                 <input type="number" class="form-control" required>
             </div>
             <div class="form-group">
-                <label>Nature of Business<span class="text-danger">**</span></label>
-                <input type="text" class="form-control" required>
+                <label>Address line 1<span class="text-danger">**</span></label>
+                <input type="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Address line 2<span class="text-danger">**</span></label>
+              <input type="address" class="form-control" required>
+            </div>
+            <div class="row">
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>Postcode<span class="text-danger">**</span></label>
+                  <input type="address" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>City<span class="text-danger">**</span></label>
+                  <input type="address" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>Country<span class="text-danger">**</span></label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-group">
+                  <label>State <span class="text-danger">**</span></label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
             </div>
           
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>       
+            <button type="button" class="btn btn-success">Save changes</button>       
         </div>
     </div>
     </div>

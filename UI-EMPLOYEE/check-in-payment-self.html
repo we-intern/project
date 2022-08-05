@@ -28,53 +28,50 @@
 
    
     .button-1{
-   
     border:none; 
     background-color:#226596;
     }
     .button-2{
-    
     border:none; 
     background-color:#11CCA8;
     }
-
 
     .inputWithIcon {
         position: relative
     }
 
+    .inputWithIcon span {
+        position: absolute;
+        right: 0px;
+        bottom: 9px;
+        color: #125040;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px
+    }
+    .form-control:focus {
+        box-shadow: none;
+        border-bottom: 1px solid #ddd
+    }
+    form {
+        font-size: 14px
+    }
 
-.inputWithIcon span {
-    position: absolute;
-    right: 0px;
-    bottom: 9px;
-    color: #57c97d;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 14px
-}
-.form-control:focus {
-    box-shadow: none;
-    border-bottom: 1px solid #ddd
-}
-form {
-    font-size: 14px
-}
+    form .btn.btn-primary {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #125040;
+        border: 1px solid #ddd
+    }
 
-form .btn.btn-primary {
-    width: 100%;
-    height: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #3ecc6d;
-    border: 1px solid #ddd
-}
-
-form .btn.btn-primary:hover {
-    background-color: #05cf48
-}
+    form .btn.btn-primary:hover {
+        background-color: #1B876C;
+    }
+   
     </style>
 </head>
   <body>
@@ -94,75 +91,107 @@ form .btn.btn-primary:hover {
             <div class="mx-3 py-4 col-xl-11">
             <h5>Payment Method </h5>
             <div class="form-check">
-                <input class="form-check-input" data-toggle="collapse" href="#collapseExample01" role="button" aria-expanded="true" aria-controls="collapseExample01" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>                        
+                <input class="form-check-input" data-toggle="collapse" href="#collapseExample01" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>                        
                 <label class="form-check-label" for="flexRadioDefault1">
                     <img src="../icon/visa-svgrepo-com.svg" width="100">
                     <img src="../icon/png/mastercard-logo.png" width="100">
-                    </label>
-                    <div class="collapse " id="collapseExample01" >
-                        <form action=""> 
-                            <div class="row">
-                                <div class="col-12"> 
-                                    <div class="d-flex flex-column px-2 mb-4"> <span>Credit Card</span> 
-                                        <div class="inputWithIcon"> 
-                                        <input class="form-control" type="text" value="5136 1845 5468 3894"> <span class="mx-2 mt-5"> 
-                                        <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png" width="50px" alt=""></span> 
-                                    </div> 
-                                    </div> 
-                                </div>
-                                <div class="col-md-6 col-6"> 
-                                    <div class="d-flex flex-column  px-2 mb-4"> 
-                                        <span>Expiration<span class="ps-1">Date</span></span> 
-                                        <div class="inputWithIcon"> 
-                                            <input type="text" class="form-control" value="05/20"> 
-                                            <span class="fas fa-calendar-alt mx-2 mb-1"></span> 
-                                        </div> 
-                                    </div> 
+                </label>
+                <div class="collapse " id="collapseExample01" >
+                    <form action=""> 
+                        <div class="row">
+                            <div class="col-12"> 
+                                <div class="d-flex flex-column px-2 mb-4"> <span>Credit Card</span> 
+                                    <div class="inputWithIcon"> 
+                                    <input class="form-control" type="text" value="5136 1845 5468 3894"> 
+                                    <span class=" fa-brands fa-cc-mastercard mx-2 mb-1"> </span> 
                                 </div> 
-                                <div class="col-md-6 col-6"> 
-                                    <div class="d-flex flex-column px-2 mb-4"> 
-                                        <span>Code CVV</span> 
-                                        <div class="inputWithIcon"> 
-                                            <input type="password" class="form-control" value="123">
-                                                <span class="fas fa-lock mx-2 mb-1"></span> 
-                                        </div> 
-                                    </div>
                                 </div> 
-                                <div class="col-12"> 
-                                    <div class="d-flex flex-column px-2 mb-4"> 
-                                        <span>Name</span> 
-                                        <div class="inputWithIcon"> 
-                                            <input class="form-control text-uppercase" type="text" value="valdimir berezovkiy"> 
-                                            <span class="far fa-user mx-2 mb-1"></span> 
-                                        </div> 
-                                    </div>
-                                </div> 
-                                <div class="col-12 px-3 "> 
-                                    <p>Data is protected under the PCI DSS standard. 
-                                        We do not store your data and do not share it with the merchant.</p>
-                                    <div class="btn btn-primary w-100">Pay RM599.00</div> 
+                            </div>
+                            <div class="col-md-6 col-6"> 
+                                <div class="d-flex flex-column  px-2 mb-4"> 
+                                    <span>Expiration<span class="ps-1">Date</span></span> 
+                                    <div class="inputWithIcon"> 
+                                        <input type="text" class="form-control" value="05/20"> 
+                                        <span class="fas fa-calendar-alt mx-2 mb-1"></span> 
+                                    </div> 
                                 </div> 
                             </div> 
-                        </form> 
-                    </div>
+                            <div class="col-md-6 col-6"> 
+                                <div class="d-flex flex-column px-2 mb-4"> 
+                                    <span>Code CVV</span> 
+                                    <div class="inputWithIcon"> 
+                                        <input type="password" class="form-control" value="123">
+                                            <span class="fas fa-lock mx-2 mb-1"></span> 
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="col-12"> 
+                                <div class="d-flex flex-column px-2 mb-4"> 
+                                    <span>Name</span> 
+                                    <div class="inputWithIcon"> 
+                                        <input class="form-control text-uppercase" type="text" value="valdimir berezovkiy"> 
+                                        <span class="far fa-user mx-2 mb-1"></span> 
+                                    </div> 
+                                </div>
+                            </div> 
+                            <div class="col-12 px-3 "> 
+                                <p>Data is protected under the PCI DSS standard. 
+                                    We do not store your data and do not share it with the merchant.</p>
+                                <a href="check-in-payment-success.html" class="text-decoration-none text white">
+                                    <div class="btn btn-primary w-100">Pay RM250.00</div> 
+                                </a>
+                               
+                            </div> 
+                        </div> 
+                    </form> 
                 </div>
+            </div>
                 <div class="form-check mt-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                <input class="form-check-input" data-toggle="collapse" href="#collapseExample02" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
                 <label class="form-check-label text-dark" for="flexRadioDefault2">
                     <img src="../icon/png/touch-n-go-ewallet-logo.png" width="100"> E-Wallet
                 </label>
+                <div class="collapse " id="collapseExample02" >
+                    <form action="check-in-payment-success.html"> 
+                        <a href="check-in-payment-success.html" class="text-decoration-none text white">
+                            <div class="col-12 px-3 mt-2 "> 
+                                <div class="btn btn-primary w-100">Pay RM250.00</div> 
+                            </div> 
+                        </a>
+                      
+                    </form> 
+                </div>
                 </div>
                 <div class="form-check mt-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
-                <label class="form-check-label text-dark" for="flexRadioDefault2">
+                <input class="form-check-input" data-toggle="collapse" href="#collapseExample03"  type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+                <label class="form-check-label text-dark" for="flexRadioDefault3">
                     <img src="../icon/png/fpx-logo.png" width="120">
                 </label>
+                <div class="collapse " id="collapseExample03" >
+                    <form action="check-in-payment-success.html"> 
+                        <a href="check-in-payment-success.html" class="text-decoration-none text white">
+                            <div class="col-12 px-3 mt-2 "> 
+                                <div class="btn btn-primary w-100">Pay RM250.00</div> 
+                            </div> 
+                        </a>
+                    </form> 
+                </div>
                 </div>
                 <div class="form-check mt-4">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
-                <label class="form-check-label text-dark" for="flexRadioDefault2">
+                <input class="form-check-input" data-toggle="collapse" href="#collapseExample04"  type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
+                <label class="form-check-label text-dark" for="flexRadioDefault4">
                         Cash
                 </label>
+                <div class="collapse " id="collapseExample04" >
+                    <form action="check-in-payment-success.html"> 
+                        <a href="check-in-payment-success.html" class="text-decoration-none text white">
+                            <div class="col-12 px-3 mt-2 "> 
+                                <div class="btn btn-primary w-100">Pay RM250.00</div> 
+                            </div> 
+                        </a>
+                      
+                    </form> 
+                </div>
                 </div>
 
                 
